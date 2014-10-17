@@ -10,6 +10,8 @@ Rails.application.configure do
   config.assets.digest = true
   config.assets.raise_runtime_errors = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  # configure the amazon server creds
   config.paperclip_defaults = {
     :storage => :s3,
     :bucket => ENV['S3_BUCKET_NAME'],
@@ -18,7 +20,8 @@ Rails.application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-
+  
+  # config twitter creds
   TwitterClient = Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
     config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
