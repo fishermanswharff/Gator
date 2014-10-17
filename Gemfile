@@ -18,7 +18,6 @@ gem 'omniauth-google'
 gem 'omniauth-github'
 gem 'paperclip'
 
-
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
