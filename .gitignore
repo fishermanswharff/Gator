@@ -11,4 +11,4 @@
 /log/*.log
 /tmp
 /docs
-/config/aws.yml
+/config/env.yml
