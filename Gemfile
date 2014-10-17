@@ -14,6 +14,8 @@ gem 'twitter'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
+gem 'omniauth-google'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'pry-byebug'
