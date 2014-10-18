@@ -11,11 +11,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'devise'
 gem 'twitter'
+gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
-gem 'omniauth-google'
+gem 'omniauth-gplus'
+gem 'omniauth-instagram'
 gem 'omniauth-github'
+gem 'omniauth-tumblr'
 gem 'paperclip'
 
 group :development, :test do
