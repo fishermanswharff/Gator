@@ -26,4 +26,5 @@ group :development, :test do
   gem 'pry-rails'
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
+  gem 'dotenv-rails'
 end

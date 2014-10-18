@@ -235,10 +235,10 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"]
-  config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]
-  config.omniauth :gplus, ENV["GPLUS_CLIENT_ID"], ENV["GPLUS_CLIENT_SECRET"]
-  config.omniauth :linkedin, ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"]
-  config.omniauth :instagram, ENV["INSTAGRAM_CLIENT_ID"], ENV["INSTAGRAM_CLIENT_SECRET"]
+  # config.omniauth :twitter, ENV["TWITTER_CONSUMER_KEY"], ENV["TWITTER_CONSUMER_SECRET"]
+  # config.omniauth :gplus, ENV["GPLUS_CLIENT_ID"], ENV["GPLUS_CLIENT_SECRET"]
+  # config.omniauth :linkedin, ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"]
+  # config.omniauth :instagram, ENV["INSTAGRAM_CLIENT_ID"], ENV["INSTAGRAM_CLIENT_SECRET"]
 
 
   # ==> Warden configuration

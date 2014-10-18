@@ -13,3 +13,4 @@
 /docs
 /config/env.yml
 /.irb-history
+.env
