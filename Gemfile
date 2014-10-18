@@ -10,7 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 gem 'devise'
-gem 'twitter'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -20,6 +19,7 @@ gem 'omniauth-instagram'
 gem 'omniauth-github'
 gem 'omniauth-tumblr'
 gem 'paperclip'
+gem 'domp'
 
 group :development, :test do
   gem 'pry-byebug'
