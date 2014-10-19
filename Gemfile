@@ -22,7 +22,7 @@ gem 'omniauth-tumblr'
 gem 'paperclip'
 gem 'domp'
 gem 'httparty'
-
+gem 'feedjira'
 gem 'twitter'
 # gem 'mini_fb'
 gem 'google_plus'
