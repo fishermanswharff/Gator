@@ -1,11 +1,11 @@
 <h1>Gator says hello world</h1>
 
 
-<!-- 
-<#% if user_signed_in? %>
- 
-  <#%= render 'tweets/tweets' %>
-  <#%= render 'facebook/facebook'  %>
+
+<% if user_signed_in? %>
+  
+  <% if AuthenticationProvider.find_by_name("twitter") %>
+  <%= render 'tweets/tweets' %>
+  <% end %>
    
-<#% end %>
--->
+<% end %>
