@@ -7,7 +7,7 @@
   <% end %>
 
   <% if AuthenticationProvider.find_by_name("facebook") %>
-    <%= link_to "Facebook info", 'facebook/index' %>
-    <!-- <#%= render 'facebook/facebook'  %> -->
+    <!-- <#%= link_to "Facebook info", facebook_index_path %> -->
+    <%= render 'facebook/index'  %>
   <% end %>
 <% end %>
