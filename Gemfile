@@ -29,7 +29,7 @@ gem 'google_plus'
 gem 'linkedin-oauth2'
 gem 'instagram'
 
-group :development, :test do
+group :development, :test, :production do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'web-console', '~> 2.0.0.beta4'
