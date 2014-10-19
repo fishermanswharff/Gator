@@ -1,5 +1,12 @@
 <h1>Gator says hello world</h1>
+
+<% if @client = TwitterClient %>
+  <%= render 'tweets/tweets' %>
+<% end  %>  
+
+
 <% if user_signed_in? %>
+  
   <!-- 
   <#%= render 'tweets/tweets' %>
   <#%= render 'facebook/facebook'  %>
