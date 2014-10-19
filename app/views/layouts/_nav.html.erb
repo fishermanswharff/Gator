@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  You are logged in! <%= current_user.email %> | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+   <p><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></p>
+  <p><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %></p>
+  <p><%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linkedin) %></p>
+  <p><%= link_to "Sign in with Google Plus", user_omniauth_authorize_path(:google_oauth2) %></p>
+  <p><%= link_to "Sign in with Instagram", user_omniauth_authorize_path(:instagram) %></p>
+<% else %>
+  <%= link_to('Login', new_user_session_path)  %>
+<% end %>

@@ -1,0 +1,8 @@
+<% @client = TwitterClient %>
+<h1><%= @client %>'s timeline:</h1>
+<% @timeline = @client.home_timeline %>
+<ul>
+  <% @timeline.each do |tweet| %>
+  <li><%= tweet.text %></li>
+  <% end %>
+</ul>

@@ -1,10 +1,10 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
-  def facebook
+  def twitter
     create
   end
 
-  def twitter
+  def facebook
     create
   end
 
