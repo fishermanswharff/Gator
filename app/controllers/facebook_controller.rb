@@ -7,6 +7,7 @@ class FacebookController < ApplicationController
     @client
   end
 end
+
 =begin
 #sql query that gives back the tokens on the provider's id
 SELECT user_authentications.token
