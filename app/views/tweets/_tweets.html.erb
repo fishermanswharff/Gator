@@ -1,9 +1,0 @@
-<% @client = TwitterClient %>
-<%= image_tag @client.user.profile_image_url %>
-<h1><%= @client.user.screen_name %>'s timeline:</h1>
-<% @timeline = @client.home_timeline %>
-<ul>
-  <% @timeline.each do |tweet| %>
-  <li><%= tweet.text %></li>
-  <% end %>
-</ul>

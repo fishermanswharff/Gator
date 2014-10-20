@@ -1,4 +1,5 @@
 <h2><%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
+<%= image_tag @twitter_client.user.profile_image_url %>
 <ul>
   <% @timeline.each do |tweet| %>
   <li><%= tweet.text %></li>

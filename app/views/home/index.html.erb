@@ -23,7 +23,7 @@
 
   <!-- instagram -->
   <% if has_instagram.length > 0 %>
-    <%= link_to "Instagram"  %>
+    <%= link_to "Instagram", instagram_index_path  %>
   <% else %>
     <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
   <% end %>
