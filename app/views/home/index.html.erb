@@ -1,8 +1,8 @@
 <h1>Gator says hello world</h1>
 
 <% if user_signed_in? %>
-  <% if AuthenticationProvider.find_by_name("twitter") && UserAuthentication.find_by_user_id(current_user.id) %>
-    <%= render 'tweets/tweets' %>
+  <% if AuthenticationProvider.find_by_name("twitter") && UserAuthentication.find_by_user_id(User.find(current_user.id).id) %>
+    <%= link_to "Twitter", tweets_path %>
   <% end %>
   <% if AuthenticationProvider.find_by_name("facebook") && UserAuthentication.find_by_user_id(current_user.id) %>
     <%= link_to "Facebook info", facebook_index_path %>
