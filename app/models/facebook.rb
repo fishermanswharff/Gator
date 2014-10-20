@@ -19,6 +19,5 @@ class Facebook
 
   def get_name 
     self.class.get('/me?fields=name', :query => { :access_token => @access_token } )
-    
   end
 end
