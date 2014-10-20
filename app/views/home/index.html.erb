@@ -1,12 +1,43 @@
 <h1>Gator says hello world</h1>
 
 <% if user_signed_in? %>
-  <%= link_to "Twitter", tweets_path %>
+  <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
+  <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
+  <% has_linkedin = auths.select { |auth| auth.params.provider == "linkedin" } %>
+  <% has_google = auths.select { |auth| auth.params.provider == "google_oauth2" } %>
+  <% has_instagram = auths.select { |auth| auth.params.provider == "instagram" } %>
+
+  <!-- twitter -->
+  <% if has_twitter.length > 0 %>
+    <%= link_to "Twitter", tweets_path %>
+  <% else %>
+    <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>
+  <% end  %>
+
+  <!-- linkedin -->
+  <% if has_linkedin.length > 0 %>
+    <%= link_to "Linked In"  %>
+  <% else %>
+    <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
+  <% end %>
+
+  <!-- instagram -->
+  <% if has_instagram.length > 0 %>
+    <%= link_to "Instagram"  %>
+  <% else %>
+    <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
+  <% end %>
+
+  <!-- google -->
+  <% if has_google.length > 0 %>
+    <%= link_to "Google"  %>
+  <% else %>
+    <%= link_to "Add Your Google Plus Account", user_omniauth_authorize_path(:google_oauth2) %>
+  <% end %>
   <!-- 
   logic goes like this:
     check to see if the user has authenticated with fb (look at controller)
     if the user has authenticated, print out the link to view facebook info
     else print nothing.
   -->
-  <%= link_to "Facebook info", facebook_index_path %>
 <% end %>
