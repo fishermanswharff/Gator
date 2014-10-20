@@ -33,8 +33,4 @@ Rails.application.configure do
     config.client_id = ENV["INSTAGRAM_CLIENT_ID"]
     config.client_secret = ENV["INSTAGRAM_CLIENT_SECRET"]
   end
-
-  
-
-
 end

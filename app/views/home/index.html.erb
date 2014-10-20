@@ -34,10 +34,4 @@
   <% else %>
     <%= link_to "Add Your Google Plus Account", user_omniauth_authorize_path(:google_oauth2) %>
   <% end %>
-  <!-- 
-  logic goes like this:
-    check to see if the user has authenticated with fb (look at controller)
-    if the user has authenticated, print out the link to view facebook info
-    else print nothing.
-  -->
 <% end %>
