@@ -1,4 +1,4 @@
-<h2><%= @client.user.screen_name %>'s Twitter feed</h2>
+<h2><%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
   <!-- <#% if AuthenticationProvider.find_by_name("twitter") && UserAuthentication.find_by_user_id(current_user.id) != nil %> -->
 <ul>
   <% @timeline.each do |tweet| %>

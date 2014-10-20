@@ -1,22 +1,13 @@
 class FacebookController < ApplicationController
-  
   def index
-    @current_user = User.find(current_user)
-    current_id = @current_user.id
-    auth = UserAuthentication.find_by_user_id(current_id)
-    if auth.params.provider == "facebook"
-      @identity = UserAuthentication.find(auth)
+    auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id }
+    has_facebook = auths.select { |auth| auth.params.provider == "facebook" }
+    if has_facebook
+      @identity = auths.map { |auth| auth if auth.params.provider == "facebook" }.compact[0]
       @fb_client = Facebook.new(@identity.params.credentials.token)
     else
-      @fb_client = nil
+      "You haven't connected to Twitter through Gator."
     end
-    # auth.params.provider == "facebook"
-    # @provider = AuthenticationProvider.find_by_name('facebook') 
-    # @auth = UserAuthentication.find_by_authentication_provider_id(@provider.id)
-    # @auth.token
-    # @client = Facebook.new(@auth.token)
-    # @client
-    binding.pry
   end
 end
 

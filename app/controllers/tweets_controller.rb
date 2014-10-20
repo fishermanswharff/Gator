@@ -4,16 +4,16 @@ class TweetsController < ApplicationController
     auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id }
     has_twitter = auths.select { |auth| auth.params.provider == "twitter" }
     if has_twitter
-      @identity = auths.map { |auth| auth if auth.params.provider == "twitter" }[0]
-      @client = TwitterClient
-      @client.access_token = @identity.params.credentials.token
-      @client.access_token_secret = @identity.params.credentials.secret
-      @timeline = @client.home_timeline
+      @identity = auths.map { |auth| auth if auth.params.provider == "twitter" }.compact[0]
+      @twitter_client = TwitterClient
+      @twitter_client.access_token = @identity.params.credentials.token
+      @twitter_client.access_token_secret = @identity.params.credentials.secret
+      @timeline = @twitter_client.home_timeline
     else
       "You haven't connected to Twitter through Gator."
     end
   end
   def update(text)
-    @client.update(text)
+    @twitter_client.update(text)
   end
 end
