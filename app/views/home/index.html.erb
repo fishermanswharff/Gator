@@ -16,7 +16,7 @@
 
   <!-- linkedin -->
   <% if has_linkedin.length > 0 %>
-    <%= link_to "Linked In"  %>
+    <%= link_to "Linked In", linkedin_index_path  %>
   <% else %>
     <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
   <% end %>

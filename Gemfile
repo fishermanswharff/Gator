@@ -26,7 +26,7 @@ gem 'feedjira'
 gem 'twitter'
 # gem 'mini_fb'
 gem 'google_plus'
-gem 'linkedin-oauth2'
+gem 'linkedin'
 gem 'instagram'
 
 group :development, :test, :production do

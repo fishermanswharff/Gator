@@ -1,6 +1,5 @@
 class InstagramController < ApplicationController
   before_action :authenticate_user!
-
   def index
     auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id }
     has_instagram = auths.select { |auth| auth.params.provider == "instagram" }
@@ -9,8 +8,6 @@ class InstagramController < ApplicationController
       @client = Instagram.client(@identity.params.credentials)
       @client.access_token = @identity.token
       @client
-
-      binding.pry
     else
       "You haven't connected to Twitter through Gator."
     end
