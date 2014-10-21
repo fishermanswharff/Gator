@@ -3,7 +3,9 @@
   <section class="instagram-feed-item">
     <header class="instagram-feed-header">
       <h2><%= media_item.user.full_name %></h2>
+      <% if media_item.caption %>
       <h4><%= simple_format(media_item.caption.text)  %></h4>
+      <% end %>
     </header>
     <div class="instagram-feed-content">
       <%= image_tag media_item.images.low_resolution.url %>  

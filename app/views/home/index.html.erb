@@ -1,5 +1,4 @@
 <h1>Gator says hello world</h1>
-
 <% if user_signed_in? %>
   <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
   <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
@@ -27,4 +26,30 @@
     <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
   <% end %>
 
+
+ <!--  
+  <div>
+    <#%= @feed.description  %>
+    <#% @feed.entries.each do |entry| %>
+      <h2><#%= simple_format(entry.title) %></h2>
+      <p><#%= entry.published  %></p>
+      <p><#%= simple_format(entry.summary) %></p>
+      <p><#%= link_to entry.url, entry.url  %></p>
+    <#% end %>
+  </div> -->
+<% else %>
+  <% @feeds.each do |feed| %>
+    <div>
+      <%= feed.description  %>
+      <!-- 
+      <#% feed.entries.each do |entry| %>
+        <h2><#%= simple_format(entry.title) %></h2>
+        <p><#%= entry.published  %></p>
+        <p><#%= simple_format(entry.summary) %></p>
+        <p><#%= link_to entry.url, entry.url  %></p>
+      <#% end %>
+       -->
+    </div>
+  <% end %>
 <% end %>
+
