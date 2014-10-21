@@ -21,7 +21,6 @@ class Feed < ActiveRecord::Base
   end
 
   def self.get_user_feeds(current_user)
-    binding.pry
     Feed.all.map { |feed| feed if feed.user_id == current_user.id }.compact
   end
 
