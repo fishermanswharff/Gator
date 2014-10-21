@@ -32,6 +32,6 @@ Rails.application.configure do
     config.client_secret = ENV["INSTAGRAM_CLIENT_SECRET"]
   end
 
-  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"])
+  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"]), :scope => 'r_fullprofile r_emailaddress r_network rw_nus rw_company_admin rw_groups r_contactinfo',
 
 end
