@@ -1,4 +1,15 @@
 <h1><%= @client.user.username %>'s Instagram Feed</h1>
-<% for media_item in @client.user_media_feed(777) %>
-  <%= image_tag(media_item.images.thumbnail.url) %>
+<% for media_item in @page_1 %>
+  <section class="instagram-feed-item">
+    <header class="instagram-feed-header">
+      <h2><%= media_item.user.full_name %></h2>
+      <h4><%= simple_format(media_item.caption.text)  %></h4>
+    </header>
+    <div class="instagram-feed-content">
+      <%= image_tag media_item.images.low_resolution.url %>  
+    </div>
+  </section>
 <% end %>
+  
+<p>Rate Limit: <%= @response.headers[:x_ratelimit_limit]  %></p>
+<p>Calls remaining: <%= @response.headers[:x_ratelimit_remaining] %></p>

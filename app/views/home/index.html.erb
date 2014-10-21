@@ -4,7 +4,6 @@
   <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
   <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
   <% has_linkedin = auths.select { |auth| auth.params.provider == "linkedin" } %>
-  <% has_google = auths.select { |auth| auth.params.provider == "google_oauth2" } %>
   <% has_instagram = auths.select { |auth| auth.params.provider == "instagram" } %>
 
   <!-- twitter -->
@@ -28,10 +27,4 @@
     <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
   <% end %>
 
-  <!-- google -->
-  <% if has_google.length > 0 %>
-    <%= link_to "Google"  %>
-  <% else %>
-    <%= link_to "Add Your Google Plus Account", user_omniauth_authorize_path(:google_oauth2) %>
-  <% end %>
 <% end %>

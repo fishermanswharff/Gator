@@ -7,9 +7,13 @@ class InstagramController < ApplicationController
       @identity = auths.map { |auth| auth if auth.params.provider == "instagram" }.compact[0]
       @client = Instagram.client(@identity.params.credentials)
       @client.access_token = @identity.token
-      @client
-    else
-      "You haven't connected to Twitter through Gator."
+      @page_1 = @client.user_media_feed(777)
+        
+      # this page 2 script was returning some weird biker dude's instagram feed
+      # page_2_max_id = @page_1.pagination.next_max_id
+      # @page_2 = @client.user_recent_media(777, max_id: page_2_max_id) unless page_2_max_id.nil?
+      
+      @response = @client.utils_raw_response
     end
   end
 end
