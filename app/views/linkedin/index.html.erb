@@ -5,11 +5,17 @@
 <% @connections.all.each do |update|  %>
   <section class="linkedin-connection">
     <header id="connection-header" class="">
-      <%= image_tag update.update_content.picture_url %>
-      <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>    
+      <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>  
+      <%= image_tag update.update_content.person.picture_url %>  
     </header>
     <div class="linkedin-connection-content">
-      <p><%= image_tag update.update_content.person.connections.all[0].picture_url %> <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %></p>
+      <p>
+      <% if update.update_content.person.connections %>
+        <%= image_tag update.update_content.person.connections.all[0].picture_url %>
+        <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %>
+      <% end %>
+      </p>
+      
     </div>
   </section>
 <% end %>

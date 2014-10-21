@@ -9,25 +9,17 @@ class TweetsController < ApplicationController
       @twitter_client.access_token = @identity.params.credentials.token
       @twitter_client.access_token_secret = @identity.params.credentials.secret
     end
-    @user = @twitter_client.user
-    @tweets = @twitter_client.home_timeline
-
     
-
-    # binding.pry
-
-    # begin
-      # @timeline = @twitter_client.home_timeline
-      # user = @twitter_client.user
-      # get_all_tweets(user)
-    # rescue Twitter::Error::TooManyRequests => error
+    begin
+      @user = @twitter_client.user
+      @tweets = @twitter_client.home_timeline
+      # binding.pry
+    rescue Twitter::Error::TooManyRequests => error
       # NOTE: Your process could go to sleep for up to 15 minutes but if you
       # retry any sooner, it will almost certainly fail with the same exception.
-      # sleep error.rate_limit.reset_in + 1
-    #   retry
-    # end
-    # user = @twitter_client.user
-    # get_all_tweets(user)
+      sleep error.rate_limit.reset_in + 1
+      # retry
+    end
   end
 
   def collect_with_max_id(collection=[], max_id=nil,&block)

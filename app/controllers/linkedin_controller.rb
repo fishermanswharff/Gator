@@ -11,6 +11,8 @@ class LinkedinController < ApplicationController
       @client.access_token.token = @identity.params.extra.access_token.token
       @connections = @client.network_updates(type: 'CONN')
       @shares = @client.network_updates(type: 'SHAR')
+
+      # binding.pry
     end
   end
 end
