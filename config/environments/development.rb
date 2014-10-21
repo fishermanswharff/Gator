@@ -38,6 +38,6 @@ Rails.application.configure do
     :request_token_path =>'/uas/oauth/requestToken?scope=r_basicprofile+r_emailaddress+r_network+r_contactinfo+rw_nus',
     :access_token_path => '/uas/oauth/accessToken' }
 
-  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"],LINKEDIN_CONFIGURATION )
+  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"], scope: 'rw_nus r_network r_emailaddress r_fullprofile r_contactinfo' )
 
 end
