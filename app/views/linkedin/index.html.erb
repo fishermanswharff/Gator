@@ -1,3 +1,31 @@
-<h1>Linked In Feed</h1>
-<%= @client.profile  %>
-<!-- <#%= @client.network_updates  %> -->
+<h1><%= link_to @client.profile.site_standard_profile_request.url do %><%= @client.profile.first_name %> <%= @client.profile.last_name %>'s Linked In Feed<% end %></h1>
+<h2><%= @client.profile.headline %></h2>
+
+<!-- Connections -->
+<% @connections.all.each do |update|  %>
+  <section class="linkedin-connection">
+    <header id="connection-header" class="">
+      <%= image_tag update.update_content.picture_url %>
+      <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>    
+    </header>
+    <div class="linkedin-connection-content">
+      <p><%= image_tag update.update_content.person.connections.all[0].picture_url %> <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %></p>
+    </div>
+  </section>
+<% end %>
+
+<!-- Shares -->
+<% @shares.all.each do |update| %>
+  <section class="linkedin-share">
+    <header id="share-header" class="">
+      <h4><%= update.update_content.person.first_name %> <%= update.update_content.person.last_name %> </h4>
+      <h5><%= update.update_content.person.headline %></h5>
+      <%= image_tag(update.update_content.person.picture_url) %>  
+    </header>
+    <div class="share-content">
+      <%= image_tag(update.update_content.person.current_share.content.submitted_image_url) %>
+      <p><%= update.update_content.person.current_share.content.description %> </p>
+      <%= link_to "View full article", update.update_content.person.current_share.content.submitted_url  %>
+    </div>
+  </section>
+<% end %>
