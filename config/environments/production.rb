@@ -98,6 +98,12 @@ Rails.application.configure do
     config.client_secret = ENV["INSTAGRAM_CLIENT_SECRET"]
   end
 
-  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"]), :scope => 'r_fullprofile r_emailaddress r_network rw_nus rw_company_admin rw_groups r_contactinfo',
-  
+  LINKEDIN_CONFIGURATION = { 
+    :site => 'https://api.linkedin.com',
+    :authorize_path => '/uas/oauth/authenticate',
+    :request_token_path =>'/uas/oauth/requestToken?scope=r_basicprofile+r_emailaddress+r_network+r_contactinfo+rw_nus',
+    :access_token_path => '/uas/oauth/accessToken' }
+
+  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"],LINKEDIN_CONFIGURATION )
+
 end
