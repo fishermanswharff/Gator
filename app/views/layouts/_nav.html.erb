@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
-  You are logged in! <%= current_user.email %> | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <ul>
+    <li><%= render 'feeds/form'  %></li>
+    <li>Logged in as: <%= current_user.email %></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+  </ul>
 <% else %>
   <%= link_to('Login', new_user_session_path)  %>
 <% end %>

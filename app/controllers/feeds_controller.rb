@@ -4,16 +4,23 @@ class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   def index
-    
-  end
-
-  def new
+    # @feed
   end
 
   def create
+    @feed = Feed.new(feed_params)
+    @feed.user_id = current_user.id
+    @feed.title = Feed.set_title(@feed)
+    if @feed.save
+      redirect_to @feed
+    else
+      render 'new'
+    end
   end
 
   def show
+    @user = User.find(@feed.user_id)
+    @parsed = Feed.init(@feed.url)
   end
 
   def edit
@@ -23,6 +30,8 @@ class FeedsController < ApplicationController
   end
 
   def destroy
+    @feed.destroy
+    redirect_to root_path
   end
 
   private

@@ -1,4 +1,3 @@
-<h1>Gator says hello world</h1>
 <% if user_signed_in? %>
   <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
   <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
@@ -6,49 +5,47 @@
   <% has_instagram = auths.select { |auth| auth.params.provider == "instagram" } %>
 
   <!-- twitter -->
+  <div class="thumb twitter-thumb">
   <% if has_twitter.length > 0 %>
     <%= link_to "Twitter", tweets_path %>
   <% else %>
     <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>
   <% end  %>
+  </div>
 
   <!-- linkedin -->
-  <% if has_linkedin.length > 0 %>
-    <%= link_to "Linked In", linkedin_index_path  %>
-  <% else %>
-    <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
-  <% end %>
-
+  <div class="thumb linkedin-thumb">
+    <% if has_linkedin.length > 0 %>
+      <%= link_to "Linked In", linkedin_index_path  %>
+    <% else %>
+      <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
+    <% end %>
+  </div>
+  
   <!-- instagram -->
-  <% if has_instagram.length > 0 %>
-    <%= link_to "Instagram", instagram_index_path  %>
-  <% else %>
-    <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
+  <div class="thumb instagram-thumb">
+    <% if has_instagram.length > 0 %>
+      <%= link_to "Instagram", instagram_index_path  %>
+    <% else %>
+      <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
+    <% end %>
+  </div>  
+  
+  <!-- rss feeds -->
+  <% if @user_feeds.length > 0  %>
+    <% @user_feeds.each do |feed| %>
+      <div class="thumb feed-thumb">
+        <%= link_to feed.title, feed  %>
+      </div>
+    <% end %>
   <% end %>
 
-
- <!--  
-  <div>
-    <#%= @feed.description  %>
-    <#% @feed.entries.each do |entry| %>
-      <h2><#%= simple_format(entry.title) %></h2>
-      <p><#%= entry.published  %></p>
-      <p><#%= simple_format(entry.summary) %></p>
-      <p><#%= link_to entry.url, entry.url  %></p>
-    <#% end %>
-  </div> -->
 <% else %>
+
+  <!-- rss feeds for no logged in users -->
   <% @feeds.each do |feed| %>
     <div>
-      <%= feed.description  %>
-      <!-- 
-      <#% feed.entries.each do |entry| %>
-        <h2><#%= simple_format(entry.title) %></h2>
-        <p><#%= entry.published  %></p>
-        <p><#%= simple_format(entry.summary) %></p>
-        <p><#%= link_to entry.url, entry.url  %></p>
-      <#% end %>
-       -->
+      <%= link_to feed.title, feed  %>
     </div>
   <% end %>
 <% end %>

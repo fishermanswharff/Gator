@@ -24,7 +24,7 @@
       <div>
         <% if tweet.urls? %>
           <% tweet.urls.each do |url| %>
-            <%= link_to url.attrs.values[0]  %>
+            <%= link_to url.attrs.values[0],url.attrs.values[0]  %>
           <% end %>
         <% end %>
       </div>
