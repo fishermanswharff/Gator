@@ -8,12 +8,13 @@ class TweetsController < ApplicationController
       @identity = auths.map { |auth| auth if auth.params.provider == "twitter" }.compact[0]
       @twitter_client.access_token = @identity.params.credentials.token
       @twitter_client.access_token_secret = @identity.params.credentials.secret
-      @timeline = @twitter_client.home_timeline
     end
+    @user = @twitter_client.user
+    @tweets = @twitter_client.home_timeline
+
     
 
-    binding.pry
-
+    # binding.pry
 
     # begin
       # @timeline = @twitter_client.home_timeline
