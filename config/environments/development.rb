@@ -28,16 +28,10 @@ Rails.application.configure do
   end
 
   InstagramClient = Instagram.configure do |config|
-    config.client_id = ENV["INSTAGRAM_CLIENT_ID"]
-    config.client_secret = ENV["INSTAGRAM_CLIENT_SECRET"]
+    config.client_id = ENV["INSTAGRAM_DEV_CLIENT_ID"]
+    config.client_secret = ENV["INSTAGRAM_DEV_CLIENT_SECRET"]
   end
 
-  LINKEDIN_CONFIGURATION = { 
-    :site => 'https://api.linkedin.com',
-    :authorize_path => '/uas/oauth/authenticate',
-    :request_token_path =>'/uas/oauth/requestToken?scope=r_basicprofile+r_emailaddress+r_network+r_contactinfo+rw_nus',
-    :access_token_path => '/uas/oauth/accessToken' }
-
-  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"], scope: 'rw_nus r_network r_emailaddress r_fullprofile r_contactinfo' )
-
+  LinkedinClient = LinkedIn::Client.new(ENV["LINKEDIN_KEY"], ENV["LINKEDIN_SECRET_KEY"])
+  
 end
