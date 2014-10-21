@@ -6,13 +6,29 @@
       
     </header>
     <div class="tweet-content">
-      <%= tweet.text %>
-      <% if tweet.media? %>
-        <% for media in tweet.media %>
-          <%= image_tag(media.media_url)  %>
+      <p><%= tweet.text %></p>
+      <div class="tweet-media">
+        <% if tweet.media? %>
+          <% for media in tweet.media %>
+            <%= image_tag media.media_url, class: 'tweet-image'  %>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= tweet.hashtags? ? tweet.hashtags : "" %>
+      </div>
+      <div>
+        <% if tweet.hashtags? %>
+          <% tweet.hashtags.each do |hashtag| %>
+            <%= '#' + hashtag.text  %>
+          <% end %>
+        <% end %>
+      </div>
+      <div>
+        <% if tweet.urls? %>
+          <% tweet.urls.each do |url| %>
+            <%= link_to url.attrs.values[0]  %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </section>
 <% end %>
+
