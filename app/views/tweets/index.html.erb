@@ -1,9 +1,10 @@
 <h2><%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
 <%= image_tag @twitter_client.user.profile_image_url %>
 <% @tweets.each do |tweet| %>
-  <section class="tweet">
+  <section class="grid_4 tweet">
     <header class="tweet-header">
-      
+      <h2><%= tweet.user.screen_name  %></h2>
+      <%= image_tag tweet.user.profile_image_url  %>
     </header>
     <div class="tweet-content">
       <p><%= tweet.text %></p>
