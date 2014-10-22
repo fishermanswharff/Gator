@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 
     @user = @twitter_client.user
     @tweets = @twitter_client.home_timeline
-    binding.pry
+    # binding.pry
     
     begin
       

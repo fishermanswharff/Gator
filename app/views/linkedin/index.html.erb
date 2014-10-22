@@ -1,37 +1,51 @@
-<h1><%= link_to @client.profile.site_standard_profile_request.url do %><%= @client.profile.first_name %> <%= @client.profile.last_name %>'s Linked In Feed<% end %></h1>
-<h2><%= @client.profile.headline %></h2>
+<div id="linkedin-content" class="container">
+  <h1><%= link_to @client.profile.site_standard_profile_request.url do %><%= @client.profile.first_name %> <%= @client.profile.last_name %>'s Linked In Feed<% end %></h1>
+  <h2><%= @client.profile.headline %></h2>
+  <hr>
 
-<!-- Connections -->
-<% @connections.all.each do |update|  %>
-  <section class="linkedin-connection">
-    <header id="connection-header" class="">
-      <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>  
-      <%= image_tag update.update_content.person.picture_url %>  
-    </header>
-    <div class="linkedin-connection-content">
-      <p>
-      <% if update.update_content.person.connections %>
-        <%= image_tag update.update_content.person.connections.all[0].picture_url %>
-        <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %>
-      <% end %>
-      </p>
-      
-    </div>
-  </section>
-<% end %>
+  <h3>Linked In Shares</h3>
+  <!-- Shares -->
+  <div class="shares-container">
+  <% @shares.all.each do |update| %>
+    <section class="linkedin-share grid_8">
+      <header id="share-header" class="grid_4">
+        <%= image_tag(update.update_content.person.picture_url) %> 
+        <h4><%= update.update_content.person.first_name %> <%= update.update_content.person.last_name %> </h4>
+        <h5><%= update.update_content.person.headline %></h5>
+      </header>
+      <div class="share-content grid_12">
+        <%= image_tag(update.update_content.person.current_share.content.submitted_image_url) %>
+        <p><%= update.update_content.person.current_share.content.description %> </p>
+        <%= link_to "View full article", update.update_content.person.current_share.content.submitted_url  %>
+      </div>
+    </section>
+  <% end %>
+  </div>
 
-<!-- Shares -->
-<% @shares.all.each do |update| %>
-  <section class="linkedin-share">
-    <header id="share-header" class="">
-      <h4><%= update.update_content.person.first_name %> <%= update.update_content.person.last_name %> </h4>
-      <h5><%= update.update_content.person.headline %></h5>
-      <%= image_tag(update.update_content.person.picture_url) %>  
-    </header>
-    <div class="share-content">
-      <%= image_tag(update.update_content.person.current_share.content.submitted_image_url) %>
-      <p><%= update.update_content.person.current_share.content.description %> </p>
-      <%= link_to "View full article", update.update_content.person.current_share.content.submitted_url  %>
-    </div>
-  </section>
-<% end %>
+  <div class="divider">
+  <hr>
+  </div>
+
+  <h3>Linked In Connections</h3>
+  <!-- Connections -->
+  <div class="connection-container">
+  <% @connections.all.each do |update|  %>
+    <section class="linkedin-connection grid_4">
+      <header id="connection-header" class="grid_8">
+        <%= image_tag update.update_content.person.picture_url, class: 'connection-thumb' %>  
+        <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>  
+      </header>
+      <div class="linkedin-connection-content grid_8">
+        <%= image_tag update.update_content.person.connections.all[0].picture_url, class: 'connection-thumb' %>
+        <p>
+        <% if update.update_content.person.connections %>
+          <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %>
+        <% end %>
+        </p>
+      </div>
+    </section>
+  <% end %>
+  </div>
+
+
+</div>
