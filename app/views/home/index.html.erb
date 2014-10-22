@@ -1,6 +1,5 @@
+<div class="container home-index-wrapper">
 <% if user_signed_in? %>
-  
-  <div class="container home-index-wrapper">
 
   <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
   <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
@@ -10,36 +9,36 @@
   <!-- twitter -->
   <% if has_twitter.length > 0 %>
     <%= link_to(tweets_path) do  %>
-      <div class="grid_3 thumb twitter-thumb">
+      <div class="grid_4 thumb twitter-thumb">
         <h3>Twitter</h3>
       </div>      
     <% end %>
   <% else %>
-    <div class="grid_3 thumb twitter-thumb">
+    <div class="grid_4 thumb twitter-thumb">
       <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>    
     </div>      
   <% end %>
 
   <% if has_linkedin.length > 0 %>
     <%= link_to(linkedin_index_path) do %>
-      <div class="grid_3 thumb linkedin-thumb">
+      <div class="grid_4 thumb linkedin-thumb">
         <h3>Linked In</h3>
       </div>
     <% end %>
   <% else %>
-    <div class="grid_3 thumb linkedin-thumb">
+    <div class="grid_4 thumb linkedin-thumb">
       <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
     </div>
   <% end %>
 
   <% if has_instagram.length > 0 %>
     <%= link_to(instagram_index_path) do %>
-      <div class="grid_3 thumb instagram-thumb">
+      <div class="grid_4 thumb instagram-thumb">
         <h3>Instagram</h3>
       </div>
     <% end %>
   <% else %>
-    <div class="grid_3 thumb instagram-thumb">
+    <div class="grid_4 thumb instagram-thumb">
       <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
     </div>
   <% end %>
@@ -48,26 +47,27 @@
   <% if @user_feeds.length > 0  %>
     <% @user_feeds.each do |feed| %>
       <%= link_to(feed) do  %>
-        <div class="grid_3 thumb feed-thumb">
+        <div class="grid_4 thumb feed-thumb">
           <h3><%= feed.title  %></h3>
-          <p>Added by: <%= User.find(@user_feeds.first.user_id).email %></p>
+          <p>Added by: <%= User.find(feed.user_id).email %></p>
         </div>
       <% end %>
     <% end %>
   <% end %>
 
-  </div>
+
 
 <% else %>
-  
-  <div class="container">
     <!-- rss feeds for no logged in users -->
-    <% @feeds.each do |feed| %>
-      <div class="grid_3 thumb feed-thumb">
-        <%= link_to feed.title, feed  %>
+  <% @feeds.each do |feed| %>
+    <%= link_to(feed) do %>
+      <div class="grid_4 thumb feed-thumb">
+        <h3><%= feed.title  %></h3>
+        <p>Added by: <%= User.find(feed.user_id).email %></p>
       </div>
     <% end %>
-  </div>
+  <% end %>
 
 <% end %>
 
+</div>
