@@ -3,7 +3,7 @@
     <li><a id="menu-button" href="javascript:void(0)" class="menu-icon indent"><span class="menu-icon__text"></span><span class="display_text">MENU</span></a></li>
     <% if user_signed_in? %>
     <li class="align-right"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-    <li class="user-signed-in align-right">Logged in as: <%= current_user.email %></li>
+    <li class="align-right user-signed-in">Logged in as: <%= current_user.email %></li>
     <% else %>
     <li class="login align-right"><%= link_to('Login', new_user_session_path)  %></li>  
     <% end %>

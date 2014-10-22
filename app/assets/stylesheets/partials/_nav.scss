@@ -80,8 +80,18 @@ nav.navbar {
       display: inline-block;
       margin: 0 10px;
 
-      &.user-signed-in { margin-left: 30px; position: relative; }
-      &.align-right { @include align-right } 
+      
+      &.align-right { 
+        @include align-right;
+        background-color: $cobalt; 
+        height: 60px; 
+        text-align: center; 
+        box-sizing: border-box; 
+        padding: 20px; 
+      }
+      &.user-signed-in {
+        background-color: $charcoal; 
+      } 
       &.login { 
         background-color: $cobalt; 
         height: 60px; 

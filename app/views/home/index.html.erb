@@ -1,52 +1,73 @@
 <% if user_signed_in? %>
+  
+  <div class="container home-index-wrapper">
+
   <% auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id } %>
   <% has_twitter = auths.select { |auth| auth.params.provider == "twitter" } %>
   <% has_linkedin = auths.select { |auth| auth.params.provider == "linkedin" } %>
   <% has_instagram = auths.select { |auth| auth.params.provider == "instagram" } %>
 
   <!-- twitter -->
-  <div class="thumb twitter-thumb">
   <% if has_twitter.length > 0 %>
-    <%= link_to "Twitter", tweets_path %>
+    <%= link_to(tweets_path) do  %>
+      <div class="grid_3 thumb twitter-thumb">
+        <h3>Twitter</h3>
+      </div>      
+    <% end %>
   <% else %>
-    <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>
-  <% end  %>
-  </div>
+    <div class="grid_3 thumb twitter-thumb">
+      <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>    
+    </div>      
+  <% end %>
 
-  <!-- linkedin -->
-  <div class="thumb linkedin-thumb">
-    <% if has_linkedin.length > 0 %>
-      <%= link_to "Linked In", linkedin_index_path  %>
-    <% else %>
+  <% if has_linkedin.length > 0 %>
+    <%= link_to(linkedin_index_path) do %>
+      <div class="grid_3 thumb linkedin-thumb">
+        <h3>Linked In</h3>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="grid_3 thumb linkedin-thumb">
       <%= link_to "Add Your Linked In Account", user_omniauth_authorize_path(:linkedin) %>
+    </div>
+  <% end %>
+
+  <% if has_instagram.length > 0 %>
+    <%= link_to(instagram_index_path) do %>
+      <div class="grid_3 thumb instagram-thumb">
+        <h3>Instagram</h3>
+      </div>
     <% end %>
-  </div>
-  
-  <!-- instagram -->
-  <div class="thumb instagram-thumb">
-    <% if has_instagram.length > 0 %>
-      <%= link_to "Instagram", instagram_index_path  %>
-    <% else %>
+  <% else %>
+    <div class="grid_3 thumb instagram-thumb">
       <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
-    <% end %>
-  </div>  
-  
+    </div>
+  <% end %>
+
+    
   <!-- rss feeds -->
   <% if @user_feeds.length > 0  %>
     <% @user_feeds.each do |feed| %>
-      <div class="thumb feed-thumb">
-        <%= link_to feed.title, feed  %>
-      </div>
+      <%= link_to(feed) do  %>
+        <div class="grid_3 thumb feed-thumb">
+          <h3><%= feed.title  %></h3>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
 
-<% else %>
+  </div>
 
-  <!-- rss feeds for no logged in users -->
-  <% @feeds.each do |feed| %>
-    <div>
-      <%= link_to feed.title, feed  %>
-    </div>
-  <% end %>
+<% else %>
+  
+  <div class="container">
+    <!-- rss feeds for no logged in users -->
+    <% @feeds.each do |feed| %>
+      <div class="grid_3 thumb feed-thumb">
+        <%= link_to feed.title, feed  %>
+      </div>
+    <% end %>
+  </div>
+
 <% end %>
 

@@ -1,0 +1,16 @@
+.home-index-wrapper {
+
+  .thumb {
+    height: 100px;
+    border: 1px solid $cobalt;
+    margin-bottom: 10px;
+
+    a {
+      position:absolute;
+      text-decoration: none;
+      color: $cobalt;
+      bottom: 10px;
+
+    }
+  }
+}

@@ -12,6 +12,11 @@ input[type="url"] {
   padding: 0 5px;
   font-family: $header-font;
   font-size: 16px;
+
+  &.feed-input {
+    display:block;
+    width: 90%;
+  }
 }
 input[type="file"],
 input[type="submit"] {
