@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+
+
   def index
     if User.all.length == 0
       redirect_to new_user_registration_path

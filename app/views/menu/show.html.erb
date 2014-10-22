@@ -1,0 +1,12 @@
+
+<% npr = Menu.new("http://www.npr.org/rss/") %>
+<% nprhash = npr.instance_values %>
+<% nprlinks = nprhash.values %>
+<ul>
+  <% nprlinks[0].each_pair do |k,v| %>
+    <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}) , action: "create" %></li>
+  <% end %>
+</ul>
+
+
+<% nyt = Menu.new('http://www.nytimes.com/services/xml/rss/index.html') %>
