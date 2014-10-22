@@ -27,8 +27,13 @@ ready = function() {
     $("p.notice.notification").removeClass('active') ;
   }
 
-
-  /*
+  $("a#menu-button").on("click", function(){
+    $(this).toggleClass("active");  
+    $("nav#feeds-menu").toggleClass("active");
+    $(".main-content").toggleClass("active");
+    $("nav.navbar").toggleClass("active");
+  });
+  
   //this is for the sliding menu up and down
   var type = $('li a').each(function(){
     if((this).getAttribute('data-type') == "unit")
@@ -38,9 +43,7 @@ ready = function() {
           else checkElement.slideDown(250);
       });
   })
-
-
-  */
+  
 };
 
 $(document).ready(ready);

@@ -1,5 +1,6 @@
 nav.navbar {
   @include defaults;
+  @include transition(all, 0.25s, ease-in-out, 0);
   z-index: $z-nav;
   position: fixed;
   top: 0;
@@ -7,20 +8,89 @@ nav.navbar {
   background-color: $charcoal;
   color: white;
   width: 100%;
-  height: auto;
+  height: 60px;
 
   ul.nav {
+
     @include defaults;
     list-style:none;
+
+
+    li a.menu-icon{
+
+      float: left;
+      display:block;
+      width:40px;
+      -webkit-transform: translate3d(0,0,0);
+
+      &:before,
+      &:after,
+      .menu-icon__text {
+          background: $white;
+          color: $white;
+          content: '';
+          display:block;
+          height:4px;
+          margin:6px 0;
+          width:100%;
+          border-radius: 3px;
+          @include transition(all, 0.25s, ease-in-out, 0)
+        }
+      .menu-icon__text {
+          text-indent: -9999px;
+        }
+        .display_text{
+          position: absolute;
+          top: 3px;
+          padding-left: 50px;
+          text-decoration: none;
+          color: $white;
+          font-family: $body-font;
+          font-size: $large-font-size;
+          // font-weight: 700;
+          font-style: normal;
+        }
+        &.active {
+          &:before {
+            -webkit-transform: rotate(45deg) translate3d(5px,10px,0);
+            -moz-transform: rotate(45deg) translate3d(5px,10px,0);
+            -o-transform: rotate(45deg) translate3d(5px,10px,0);
+            -ms-transform: rotate(45deg) translate3d(5px,10px,0);
+            transform: rotate(45deg) translate3d(5px,10px,0);
+          }
+
+          .menu-icon__text {
+              opacity: 0;
+          }
+
+          &:after {
+            -webkit-transform: rotate(-45deg) translate3d(5px,-10px,0);
+            -moz-transform: rotate(-45deg) translate3d(5px,-10px,0);
+            -o-transform: rotate(-45deg) translate3d(5px,-10px,0);
+            -ms-transform: rotate(-45deg) translate3d(5px,-10px,0);
+            transform: rotate(-45deg) translate3d(5px,-10px,0);
+          }
+        }
+    }
+    .indent {
+        margin: 13px auto;
+    }
 
     li {
       display: inline-block;
       margin: 0 10px;
-      padding: 20px;
 
       &.user-signed-in { margin-left: 30px; position: relative; }
       &.align-right { @include align-right } 
-      &.login { background-color: $cobalt; }
+      &.login { 
+        background-color: $cobalt; 
+        height: 60px; 
+        width: 80px; 
+        text-align: center; 
+        box-sizing: border-box; 
+        padding-top: 20px; 
+      }
+
       a { 
         color: $white;
         text-decoration: none;
@@ -56,5 +126,10 @@ nav.navbar {
         }
       }
     }
+  }
+
+  &.active {
+    left: 25%;
+    width: 75%;
   }
 }
