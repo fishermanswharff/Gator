@@ -14,6 +14,31 @@
       color: $cobalt;
     }
     p {font-size: 12px; color: $cobalt; }
+    span {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: $icon-width;
+      height: $icon-height;
+      background-image: $icons;
+
+      &.twitter-icon {
+        background-position-x: -($icon-width * 0);
+        background-position-y: -($icon-width * 0);
+      }
+      &.linkedin-icon {
+        background-position-x: -($icon-width * 2);
+        background-position-y: -($icon-width * 0);
+      }
+      &.instagram-icon {
+        background-position-x: -($icon-width * 1); 
+        background-position-y: -($icon-width * 0);
+      }  
+      &.feed-icon {
+        background-position-x: -($icon-width * 3);
+        background-position-y:  -($icon-width * 0);
+      }    
+    }
 
     &:hover {
       background-color: $cobalt;

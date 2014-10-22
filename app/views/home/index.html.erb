@@ -11,6 +11,7 @@
     <%= link_to(tweets_path) do  %>
       <div class="grid_4 thumb twitter-thumb">
         <h3>Twitter</h3>
+        <span class="twitter-icon"></span>
       </div>      
     <% end %>
   <% else %>
@@ -23,6 +24,7 @@
     <%= link_to(linkedin_index_path) do %>
       <div class="grid_4 thumb linkedin-thumb">
         <h3>Linked In</h3>
+        <span class="linkedin-icon"></span>
       </div>
     <% end %>
   <% else %>
@@ -35,6 +37,7 @@
     <%= link_to(instagram_index_path) do %>
       <div class="grid_4 thumb instagram-thumb">
         <h3>Instagram</h3>
+        <span class="instagram-icon"></span>
       </div>
     <% end %>
   <% else %>
@@ -50,12 +53,11 @@
         <div class="grid_4 thumb feed-thumb">
           <h3><%= feed.title  %></h3>
           <p>Added by: <%= User.find(feed.user_id).email %></p>
+          <span class="feed-icon"></span>
         </div>
       <% end %>
     <% end %>
   <% end %>
-
-
 
 <% else %>
     <!-- rss feeds for no logged in users -->
@@ -64,6 +66,7 @@
       <div class="grid_4 thumb feed-thumb">
         <h3><%= feed.title  %></h3>
         <p>Added by: <%= User.find(feed.user_id).email %></p>
+        <span class="feed-icon"></span>
       </div>
     <% end %>
   <% end %>
