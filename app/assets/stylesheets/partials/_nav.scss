@@ -76,6 +76,17 @@ nav.navbar {
         margin: 13px auto;
     }
 
+    li.brand {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      text-align: center;
+
+      a.brand-home-link { position: relative; top: 20px; }
+    }
+
     li {
       display: inline-block;
       margin: 0 10px;
