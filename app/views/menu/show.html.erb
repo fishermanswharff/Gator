@@ -1,12 +1,21 @@
 
-<% npr = Menu.new("http://www.npr.org/rss/") %>
+<% npr = Menu.new("http://www.npr.org/rss/", {type: "NPR"}) %>
 <% nprhash = npr.instance_values %>
 <% nprlinks = nprhash.values %>
+<h2>NPR: Always On</h2>
 <ul>
   <% nprlinks[0].each_pair do |k,v| %>
-    <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}) , action: "create" %></li>
+  <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}) , action: "create" %></li>
   <% end %>
 </ul>
 
 
-<% nyt = Menu.new('http://www.nytimes.com/services/xml/rss/index.html') %>
+<% nyt = Menu.new('http://www.nytimes.com/services/xml/rss/index.html', {type:"NYT"}) %>
+<% nythash = nyt.instance_values %>
+<% nytlinks = nythash.values %>
+<h2>NY Times</h2>
+<ul>
+  <% nytlinks[0].each_pair do |k,v| %>
+  <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}), action: "create" %></li>
+  <% end %>
+</ul>
