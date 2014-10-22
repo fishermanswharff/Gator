@@ -1,10 +1,11 @@
-<h2><%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
-<%= image_tag @twitter_client.user.profile_image_url %>
+<div id="twitter-container" class="container">
+<h2><%= image_tag @twitter_client.user.profile_image_url %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
+
+<hr>
 <% @tweets.each do |tweet| %>
   <section class="grid_4 tweet">
     <header class="tweet-header">
-      <h2><%= tweet.user.screen_name  %></h2>
-      <%= image_tag tweet.user.profile_image_url  %>
+      <h2><%= image_tag tweet.user.profile_image_url, class: 'profile-pic' %> <%= tweet.user.screen_name %></h2>
     </header>
     <div class="tweet-content">
       <p><%= tweet.text %></p>
@@ -18,7 +19,7 @@
       <div>
         <% if tweet.hashtags? %>
           <% tweet.hashtags.each do |hashtag| %>
-            <%= '#' + hashtag.text  %>
+            <p><%= '#' + hashtag.text  %></p>
           <% end %>
         <% end %>
       </div>
@@ -33,3 +34,4 @@
   </section>
 <% end %>
 
+</div>
