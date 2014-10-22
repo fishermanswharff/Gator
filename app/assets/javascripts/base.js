@@ -34,10 +34,12 @@ ready = function() {
     $("nav.navbar").toggleClass("active");
   });
   
+
   //this is for the sliding menu up and down
-  var type = $('li a').each(function(){
+  var type = $('nav#feeds-menu a.provider').each(function(){
     if((this).getAttribute('data-type') == "unit")
       $(this).click(function(){
+        event.preventDefault();
         var checkElement = $(this).next();
           if(checkElement.is(':visible')) checkElement.slideUp(250);
           else checkElement.slideDown(250);

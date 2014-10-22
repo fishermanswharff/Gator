@@ -9,11 +9,10 @@
     <h2>Add your own rss feed:</h2>
     <%= render 'feeds/form'  %>  
   </div>
-
   <h2>Select a feed:</h2>
   <ul>
     <li>
-      <a href="javascriopt:void(0)">NPR: Always On</a>
+      <a class="provider" href="javascriopt:void(0)" data-type="unit">NPR: Always On</a>
       <ul>
         <% nprlinks[0].each_pair do |k,v| %>
         <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}) , action: "create", class: 'btn btn-default' %></li>
@@ -21,7 +20,7 @@
       </ul>
     </li>
     <li>
-      <a href="javascriopt:void(0)">NY Times</a>
+      <a class="provider" href="javascriopt:void(0)" data-type="unit">NY Times</a>
       <ul>
         <% nytlinks[0].each_pair do |k,v| %>
         <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}), action: "create", class: 'btn btn-default' %></li>

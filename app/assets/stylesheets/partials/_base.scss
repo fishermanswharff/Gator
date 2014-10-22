@@ -1,6 +1,8 @@
 body {
   @include defaults;
   padding-top: 60px;
+  @include transition(all, 0.25s, ease-in-out, 0);
+  
   #container.main-content { 
     @include transition(all, 0.25s, ease-in-out, 0);
     box-sizing: border-box;    
