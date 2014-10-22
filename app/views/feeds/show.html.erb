@@ -1,6 +1,15 @@
-<% @parsed.entries.each do |entry|  %>
-  <h2><%= simple_format(entry.title) %></h2>
-  <p><%= entry.published  %></p>
-  <p><%= simple_format(entry.summary) %></p>
-  <p><%= link_to entry.url, entry.url  %></p>
-<% end %>
+<div class="container">
+  <% @parsed.entries.each do |entry|  %>
+  <section class="feed grid_16">
+    <header id="feed-header" class="grid_6">
+      <h2><%= simple_format(entry.title) %></h2>
+      <p><%= entry.published  %></p>    
+    </header><!-- /header -->
+    <div class="grid_10">
+      <p><%= simple_format(entry.summary) %></p>
+      <p><%= link_to entry.url, entry.url  %></p>  
+    </div>
+  </section>
+  <hr>
+  <% end %>  
+</div>
