@@ -1,12 +1,19 @@
 <div id="twitter-container" class="container">
-<h2><%= image_tag @twitter_client.user.profile_image_url %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
+<h2><%= image_tag @twitter_client.user.profile_image_url, class: 'profile-pic' %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
 <hr>
 <% @tweets.each do |tweet| %>
   <section class="grid_16 tweet">
-    <header class="tweet-header grid_6">
+    <header class="tweet-header grid_4">
       <h2><%= image_tag tweet.user.profile_image_url, class: 'profile-pic' %> <%= tweet.user.screen_name %></h2>
     </header>
-    <div class="tweet-content grid_10">
+    <div class="tweet-media grid_4">
+      <% if tweet.media? %>
+        <% for media in tweet.media %>
+          <%= image_tag media.media_url, class: 'tweet-image'  %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="tweet-content grid_8">
       <p><%= tweet.text %></p>
       <div>
         <% if tweet.urls? %>
@@ -15,13 +22,7 @@
           <% end %>
         <% end %>
       </div>
-      <div class="tweet-media">
-        <% if tweet.media? %>
-          <% for media in tweet.media %>
-            <%= image_tag media.media_url, class: 'tweet-image'  %>
-          <% end %>
-        <% end %>
-      </div>
+      
       <div>
         <% if tweet.hashtags? %>
           <% tweet.hashtags.each do |hashtag| %>
@@ -31,5 +32,6 @@
       </div>
     </div>
   </section>
+  <hr>
 <% end %>
 </div>

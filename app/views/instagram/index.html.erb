@@ -1,17 +1,23 @@
-<h1><%= @client.user.username %>'s Instagram Feed</h1>
-<% for media_item in @page_1 %>
-  <section class="instagram-feed-item">
-    <header class="instagram-feed-header">
-      <h2><%= media_item.user.full_name %></h2>
-      <% if media_item.caption %>
-      <h4><%= simple_format(media_item.caption.text)  %></h4>
-      <% end %>
-    </header>
-    <div class="instagram-feed-content">
-      <%= image_tag media_item.images.low_resolution.url %>  
-    </div>
-  </section>
-<% end %>
+<div class="container">
+  <h1><%= @client.user.username %>'s Instagram Feed</h1>
+  <hr>
+  <% for media_item in @page_1 %>
+    <section class="instagram-feed-item grid_4">
+      <div class="instagram-feed-content">
+        <%= image_tag media_item.images.low_resolution.url %>  
+      </div>
+      <header class="instagram-feed-header">
+        <h2><%= media_item.user.full_name %></h2>
+        <% if media_item.caption %>
+        <h4><%= simple_format(media_item.caption.text)  %></h4>
+        <% end %>
+      </header>
+    </section>
+  <% end %>
+  <div class="grid_16">
+    <!-- Instagram Rate Calls -->
+    <p>Rate Limit: <%= @response.headers[:x_ratelimit_limit]  %></p>
+    <p>Calls remaining: <%= @response.headers[:x_ratelimit_remaining] %></p>    
+  </div>
   
-<p>Rate Limit: <%= @response.headers[:x_ratelimit_limit]  %></p>
-<p>Calls remaining: <%= @response.headers[:x_ratelimit_remaining] %></p>
+</div>

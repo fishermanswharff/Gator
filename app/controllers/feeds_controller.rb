@@ -21,8 +21,6 @@ class FeedsController < ApplicationController
   def show
     @user = User.find(@feed.user_id)
     @parsed = Feed.init(@feed.url)
-
-    binding.pry
   end
 
   def edit

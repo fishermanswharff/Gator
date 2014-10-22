@@ -8,6 +8,8 @@ body {
     box-sizing: border-box;    
     padding-left: 20px;
     z-index: $z-body; 
+    width: 100%;
+    
     &.active {
       left: 25%;
       width: 75%;
