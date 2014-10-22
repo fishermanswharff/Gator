@@ -1,0 +1,17 @@
+a.btn {
+  @include button($cobalt, $white, 4px);
+  &.btn-primary { }
+  &.btn-success {  }
+  &.btn-warning {  }
+  &.btn-info {  }
+  &.btn-default { 
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $black;
+    background-color: $white;
+    padding: 6px 10px 8px;
+    cursor: pointer; 
+  }
+  &.btn-xs { padding: 4px 6px 5px; }
+  &.btn-large { padding: 15px 25px; }
+}

@@ -1,0 +1,72 @@
+input { @include transition(all, 0.25s, ease, 0); }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
+  height: 30px;
+  border: 1px solid $charcoal;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-family: $header-font;
+  font-size: 16px;
+}
+input[type="file"],
+input[type="submit"] {
+  &.btn {
+    &.btn-default {
+      border: 1px solid $black;
+      border-radius: 4px;
+      color: $black;
+      background-color: $white;
+      padding: 6px 10px 8px;
+      cursor: pointer; 
+
+      &:hover {
+        background-color: $charcoal;
+        color: $white;
+      }
+    }  
+  }
+}
+
+
+form.nav-form.inline-form {
+  width: 300px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+
+  input[type="text"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    height: 35px;
+    background-color: #6d6e71;
+    color: white;
+    font-family: "freight-sans-pro";
+    font-size: 18px;
+    padding: 4px;
+  }
+  input[type="submit"] {
+    border: 1px solid $white;
+    border-radius: 4px;
+    color: $black;
+    background-color: $white;
+    padding: 6px 10px 8px;
+    cursor: pointer;
+
+    
+    &:hover {
+      background-color: $charcoal;
+      color: $white;
+    }
+    
+
+  }
+}
+.category-search-results {
+  margin-top: 100px;
+}

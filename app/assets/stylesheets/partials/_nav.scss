@@ -1,0 +1,60 @@
+nav.navbar {
+  @include defaults;
+  z-index: $z-nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $charcoal;
+  color: white;
+  width: 100%;
+  height: auto;
+
+  ul.nav {
+    @include defaults;
+    list-style:none;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 20px;
+
+      &.user-signed-in { margin-left: 30px; position: relative; }
+      &.align-right { @include align-right } 
+      &.login { background-color: $cobalt; }
+      a { 
+        color: $white;
+        text-decoration: none;
+      }
+
+      ul {
+        @include defaults;
+        @include transition(all, 0.25s, ease, 0);
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 10px #000;
+        width: 150px;
+        &.active { visibility: visible; opacity: 1; }
+
+        li {
+          display: block;
+          list-style: none;
+          margin: 10px 0;
+          padding: 0;
+          box-sizing: border-box;
+          a {
+            display: block;
+            color: $charcoal;
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            &:hover { color: $white; margin: 10px auto; background-color: $cobalt;}
+          }
+        }
+      }
+    }
+  }
+}

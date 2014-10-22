@@ -1,0 +1,16 @@
+p.notice.notification.active,
+p.alert.notification.active {
+  position: fixed;
+  top: 55px;
+  right: 10px;
+  // background: rgba(0,0,0,.7);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 10px #000;
+  border: 2px solid #000;
+  z-index: $-alerts;
+}
+
+.alert { background: $alert-color; }
+.notice { background: $notice-color; }

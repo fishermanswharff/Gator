@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>Gator</title>
+  <script src="//use.typekit.net/vum4rex.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,6 +13,12 @@
 <%= render template: 'menu/show'  %>
 <%= render 'layouts/deviseflashes'  %>
 <%= render 'layouts/nav' %>
-<%= yield %>
+<div id="container" class="main-content">
+  <%= yield %>  
+</div>
+
+
+
+
 </body>
 </html>
