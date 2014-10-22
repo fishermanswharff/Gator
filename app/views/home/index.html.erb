@@ -43,7 +43,6 @@
       <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
     </div>
   <% end %>
-
     
   <!-- rss feeds -->
   <% if @user_feeds.length > 0  %>
@@ -51,6 +50,7 @@
       <%= link_to(feed) do  %>
         <div class="grid_3 thumb feed-thumb">
           <h3><%= feed.title  %></h3>
+          <p>Added by: <%= User.find(@user_feeds.first.user_id).email %></p>
         </div>
       <% end %>
     <% end %>

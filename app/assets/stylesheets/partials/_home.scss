@@ -1,16 +1,24 @@
 .home-index-wrapper {
 
   .thumb {
-    height: 100px;
+    @include transition(all, 0.25s, ease, 0);
+    height: 150px;
     border: 1px solid $cobalt;
     margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 15px;
 
-    a {
-      position:absolute;
+    h3 {
+      @include defaults;
       text-decoration: none;
       color: $cobalt;
-      bottom: 10px;
+    }
+    p {font-size: 12px; color: $cobalt; }
 
+    &:hover {
+      background-color: $cobalt;
+      h3 {color: $charcoal;}
+      p {color: $charcoal;}
     }
   }
 }
