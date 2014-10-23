@@ -16,7 +16,7 @@
 <% tmzlinks = tmzhash.values %>
 
 <!-- USNEWS -->
-<% usnews = Menu.new("http://www.usnews.com/info/features/rss-feeds", {params: "a.rss"}) %>
+<% usnews = Menu.new("http://www.usnews.com/info/features/rss-feeds", {type: "MISC", params: "a.rss"}) %>
 <% usnewshash = usnews.instance_values %>
 <% usnewslinks = usnewshash.values %>
 
