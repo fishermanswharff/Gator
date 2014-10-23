@@ -9,13 +9,12 @@ class TweetsController < ApplicationController
       @twitter_client.access_token = @identity.params.credentials.token
       @twitter_client.access_token_secret = @identity.params.credentials.secret
     end
-
+    
     @user = @twitter_client.user
     @tweets = @twitter_client.home_timeline
-    # binding.pry
     
     begin
-      
+      # binding.pry
     rescue Twitter::Error::TooManyRequests => error
       # NOTE: Your process could go to sleep for up to 15 minutes but if you
       # retry any sooner, it will almost certainly fail with the same exception.

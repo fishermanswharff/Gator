@@ -36,7 +36,9 @@
         <h4><%= update.update_content.person.first_name  %> <%= update.update_content.person.last_name %> <small>is now connected to:</small></h4>  
       </header>
       <div class="linkedin-connection-content grid_8">
+        <% if update.update_content.person.connections %>
         <%= image_tag update.update_content.person.connections.all[0].picture_url, class: 'connection-thumb' %>
+        <% end %>
         <p>
         <% if update.update_content.person.connections %>
           <%= update.update_content.person.connections.all[0].first_name %> <%= update.update_content.person.connections.all[0].last_name %>

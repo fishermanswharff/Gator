@@ -1,6 +1,10 @@
 class Feed < ActiveRecord::Base
   belongs_to :user
   validates :url,presence: true
+  # validates_with GoodnessValidator, fields: [:url]
+  # validate do |feed|
+  #   GoodnessValidator.new(feed).validate
+  # end
 
   def self.init(url)
     @feed = Feedjira::Feed.fetch_and_parse(url)
@@ -29,5 +33,19 @@ class Feed < ActiveRecord::Base
       return feed if feed.url == url
     end
   end
-
 end
+
+# class GoodnessValidator
+#   def initialize(feed)
+#     @feed = feed
+#   end
+
+#   def validate
+#     
+#     failure_callback = lambda { |curl, err| puts curl, err }
+#     @feed = Feedjira::Feed.fetch_and_parse @feed, on_failure: failure_callback
+#     if @feed == nil
+#       @feed.errors[:base] << failure_callback
+#     end
+#   end
+# end
