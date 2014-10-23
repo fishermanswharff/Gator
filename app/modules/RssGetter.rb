@@ -67,7 +67,7 @@ module RssGetter
     end
   end
 
-  class MISC
+  class Links
     def initialize(url, params)
       @page = Nokogiri::HTML(open(url))
       parse(params)

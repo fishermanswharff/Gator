@@ -9,9 +9,8 @@ class Menu
       @hash = RssGetter::NYT.new(url).to_hash
     elsif options.values[0] == "TMZ"
       @hash = RssGetter::TMZ.new(url).to_hash
-    elsif options.values[0] == "MISC"
-      @hash = RssGetter::MISC.new(url, options.values[1]).to_hash
+    else
+      @hash = RssGetter::MISC.new(url, options.values[0]).to_hash
     end
   end
-
 end
