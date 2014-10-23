@@ -1,0 +1,26 @@
+Memoizable::InstanceMethods#methods: freeze  memoize
+Twitter::Base#methods: []  attrs  to_h  to_hash  to_hsh
+#<Equalizer:0x007fd9e2019dc0>#methods: hash  inspect
+Equalizer::Methods#methods: ==  eql?
+Twitter::Identity#methods: id  id?
+Twitter::BasicUser#methods: following  following?  handle  screen_name  screen_name?  user_name  username
+Twitter::Creatable#methods: created?  created_at
+Twitter::Profile#methods: 
+  profile_banner_uri        profile_banner_uri_https?  profile_banner_url_https   profile_image_uri?        profile_image_url        profile_image_url_https?
+  profile_banner_uri?       profile_banner_url         profile_banner_url_https?  profile_image_uri_https   profile_image_url?     
+  profile_banner_uri_https  profile_banner_url?        profile_image_uri          profile_image_uri_https?  profile_image_url_https
+Twitter::User#methods: 
+  connections             description_urls?     lang?                      profile_background_color             profile_sidebar_border_color?  suspended             utc_offset?  
+  connections?            entities?             listed_count               profile_background_color?            profile_sidebar_fill_color     suspended?            verified     
+  contributors_enabled    favorites_count       listed_count?              profile_background_image_uri         profile_sidebar_fill_color?    time_zone             verified?    
+  contributors_enabled?   favourites_count?     location                   profile_background_image_uri_https   profile_text_color             time_zone?            website      
+  default_profile         follow_request_sent   location?                  profile_background_image_url         profile_text_color?            translation_enabled?  website?     
+  default_profile?        follow_request_sent?  muting                     profile_background_image_url?        profile_use_background_image   translator?           website_uris 
+  default_profile_image   followers_count       muting?                    profile_background_image_url_https   profile_use_background_image?  tweet                 website_uris?
+  default_profile_image?  followers_count?      name                       profile_background_image_url_https?  protected                      tweet?                website_urls 
+  description             friends_count         name?                      profile_background_tile              protected?                     tweeted?              website_urls?
+  description?            friends_count?        needs_phone_verification   profile_background_tile?             status                         tweets_count        
+  description_uris        geo_enabled           needs_phone_verification?  profile_link_color                   status?                        uri                 
+  description_uris?       geo_enabled?          notifications              profile_link_color?                  statuses_count                 url                 
+  description_urls        lang                  notifications?             profile_sidebar_border_color         statuses_count?                utc_offset          
+instance variables: @_memoized_method_cache  @attrs

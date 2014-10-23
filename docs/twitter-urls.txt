@@ -1,0 +1,28 @@
+urls = @tweets.map do |tweet|
+  tweet.urls
+end
+
+urls ==
+[
+  [#<Twitter::Entity::URI:0x007fa767602938 @attrs={:url=>"http://t.co/YpogmY0Sza", :expanded_url=>"http://goo.gl/9xWGRA", :display_url=>"goo.gl/9xWGRA", :indices=>[44, 66]}>],
+  [#<Twitter::Entity::URI:0x007fa767602780 @attrs={:url=>"http://t.co/T5Rcwoi0aa", :expanded_url=>"http://bit.ly/1vZEzkx", :display_url=>"bit.ly/1vZEzkx", :indices=>[96, 118]}>],
+  [#<Twitter::Entity::URI:0x007fa7676025c8 @attrs={:url=>"http://t.co/iGFy8KTwbK", :expanded_url=>"http://go.nesn.com/1s0a0Dv", :display_url=>"go.nesn.com/1s0a0Dv", :indices=>[80, 102]}>],
+  [],
+  [#<Twitter::Entity::URI:0x007fa767602280 @attrs={:url=>"http://t.co/fvdWt4gtuI", :expanded_url=>"http://apne.ws/1DtQRme", :display_url=>"apne.ws/1DtQRme", :indices=>[107, 129]}>],
+  [#<Twitter::Entity::URI:0x007fa767602028 @attrs={:url=>"http://t.co/EjXjhWe0Ax", :expanded_url=>"http://go.nesn.com/1wkRES4", :display_url=>"go.nesn.com/1wkRES4", :indices=>[78, 100]}>],
+  [#<Twitter::Entity::URI:0x007fa767601e70 @attrs={:url=>"http://t.co/FxxuqnRE5i", :expanded_url=>"http://nerdi.st/10fJqRy", :display_url=>"nerdi.st/10fJqRy", :indices=>[90, 112]}>],
+  [],
+  [#<Twitter::Entity::URI:0x007fa767601b28 @attrs={:url=>"http://t.co/gPSqUCmCtk", :expanded_url=>"http://ow.ly/D409W", :display_url=>"ow.ly/D409W", :indices=>[55, 77]}>],
+  [#<Twitter::Entity::URI:0x007fa767601948 @attrs={:url=>"http://t.co/H0mt3GkmLJ", :expanded_url=>"http://bit.ly/1sFYAss", :display_url=>"bit.ly/1sFYAss", :indices=>[78, 100]}>],
+  [],
+  [#<Twitter::Entity::URI:0x007fa767601600 @attrs={:url=>"http://t.co/psTIpeHfu8", :expanded_url=>"http://bit.ly/1t6OsdI", :display_url=>"bit.ly/1t6OsdI", :indices=>[75, 97]}>],
+  [#<Twitter::Entity::URI:0x007fa767601420 @attrs={:url=>"http://t.co/mRyiNuSSLV", :expanded_url=>"http://code.flickr.net/2014/10/20/introducing-flickr-park-or-bird/", :display_url=>"code.flickr.net/2014/10/20/int…", :indices=>[13, 35]}>],
+  [#<Twitter::Entity::URI:0x007fa767601268 @attrs={:url=>"http://t.co/z3WL73WMz9", :expanded_url=>"http://goo.gl/U5yieU", :display_url=>"goo.gl/U5yieU", :indices=>[41, 63]}>],
+  [#<Twitter::Entity::URI:0x007fa7676010b0 @attrs={:url=>"http://t.co/F18zKOopR6", :expanded_url=>"http://s.hbr.org/1t47ku2", :display_url=>"s.hbr.org/1t47ku2", :indices=>[76, 98]}>],
+  [],
+  [#<Twitter::Entity::URI:0x007fa767600d68 @attrs={:url=>"http://t.co/uFaOUnRw2V", :expanded_url=>"http://is.gd/DnCYo7", :display_url=>"is.gd/DnCYo7", :indices=>[34, 56]}>],
+  [#<Twitter::Entity::URI:0x007fa767600bb0 @attrs={:url=>"http://t.co/AAtpkhEKAU", :expanded_url=>"http://goo.gl/sE5JSh", :display_url=>"goo.gl/sE5JSh", :indices=>[66, 88]}>],
+  [#<Twitter::Entity::URI:0x007fa7676009f8 @attrs={:url=>"https://t.co/kbuaKDwBrR", :expanded_url=>"https://www.youtube.com/watch?v=YMvYTUSez_0&list=UU8-Th83bH_thdKZDJCrn88g", :display_url=>"youtube.com/watch?v=YMvYTU…", :indices=>[91, 114]}>],
+  []
+]
+

@@ -1,0 +1,16 @@
+tuesday, 10/21
+———————————————————————————————————————————————————————————————
+incorporate feedjira into app, allow for searching of feeds (by category?), 
+allow some defaults, maybe top stories of a few different rss feeds? 
+move logic from social media controllers into models
+
+create a magazine model/migration that belongs to users
+  title
+  url of article
+
+
+
+
+create a model/migration so that users can save feed items into their own magazine
+feed = Feedjira::Feed.fetch_and_parse('http://rss.cnn.com/rss/cnn_topstories.rss')
+

@@ -1,0 +1,176 @@
+#<Feedjira::Parser::ITunesRSS:0x007fbae4680910
+ @copyright="Copyright 2014 NPR - For Personal Use Only",
+ @description=
+  "NPR news, audio, and podcasts. Coverage of breaking stories, national and world news, politics, business, science, technology, and extended coverage of major national and world events.",
+ @entries=
+  [
+    #<Feedjira::Parser::ITunesRSSItem:0x007fbae46bf570
+    @content=
+     "<p>Former Mayor Rudy Giuliani was among those who denounced <em>The Death of Klinghoffer</em> by John Adams, calling it anti-Semitic and anti-Israel.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357780829\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357780829/opera-about-1985-achille-lauro-hijacking-draws-protests-at-met?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 12:41:21 UTC,
+    @summary=
+     "Former Mayor Rudy Giuliani was among those who denounced <em>The Death of Klinghoffer</em> by John Adams, calling it anti-Semitic and anti-Israel.",
+    @title="Opera About 1985 Achille Lauro Hijacking Draws Protests At Met",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357780829/opera-about-1985-achille-lauro-hijacking-draws-protests-at-met?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46c7900
+    @content=
+     "<p>Christopher de Margerie, 63, and three other people died when his private plane collided with a snowplow at an airport in Moscow.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357772929\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357772929/ceo-of-major-french-oil-company-dies-in-plane-crash?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 11:53:00 UTC,
+    @summary=
+     "Christopher de Margerie, 63, and three other people died when his private plane collided with a snowplow at an airport in Moscow.",
+    @title="CEO Of French Oil Giant Total Dies In Plane Accident",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357772929/ceo-of-major-french-oil-company-dies-in-plane-crash?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46c4160
+    @content=
+     "<p>Chief Executive Leung Chun-ying says his government cannot allow open nominations for his successor, but suggests there's room for compromise on the makeup of a committee to select candidates.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357773496\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357773496/hong-kong-leader-hints-at-concessions-as-talks-with-students-begin?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 11:12:07 UTC,
+    @summary=
+     "Chief Executive Leung Chun-ying says his government cannot allow open nominations for his successor, but suggests there's room for compromise on the makeup of a committee to select candidates.",
+    @title="Hong Kong Leader Hints At Concessions As Talks With Students Begin",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357773496/hong-kong-leader-hints-at-concessions-as-talks-with-students-begin?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46cc978
+    @content=
+     "<p>Two million people have already voted in next month's election, including President Obama. Locking in votes early is huge, particularly since control of the Senate rests in a handful of close races.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357637172\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/2014/10/21/357637172/in-tight-races-both-parties-bank-on-early-votes?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 10:45:00 UTC,
+    @summary=
+     "Two million people have already voted in next month's election, including President Obama. Locking in votes early is huge, particularly since control of the Senate rests in a handful of close races.",
+    @title="In Tight Races, Both Parties Bank On Early Votes",
+    @url=
+     "http://www.npr.org/2014/10/21/357637172/in-tight-races-both-parties-bank-on-early-votes?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46d5190
+    @content=
+     "<p>Millennials get a lot of financial and emotional support from their parents, which critics say causes delayed adolescence. But actually this close relationship benefits both kids and parents.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=356951640\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/2014/10/21/356951640/some-millennials-and-their-parents-are-slow-to-cut-the-cord?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 10:40:00 UTC,
+    @summary=
+     "Millennials get a lot of financial and emotional support from their parents, which critics say causes delayed adolescence. But actually this close relationship benefits both kids and parents.",
+    @title="Some Millennials — And Their Parents — Are Slow To Cut The Cord",
+    @url=
+     "http://www.npr.org/2014/10/21/356951640/some-millennials-and-their-parents-are-slow-to-cut-the-cord?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46dd9a8
+    @content=
+     "<p>The Olympian was convicted of culpable homicide last month — rather than a more serious charge of premeditated murder — for the 2013 fatal shooting of Reeva Steenkamp in his home.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357738319\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357738319/oscar-pistorius-gets-5-years-in-prison-for-killing-girlfriend?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 08:50:00 UTC,
+    @summary=
+     "The Olympian was convicted of culpable homicide last month — rather than a more serious charge of premeditated murder — for the 2013 fatal shooting of Reeva Steenkamp in his home.",
+    @title="Oscar Pistorius Gets 5 Years In Prison For Killing Girlfriend",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/21/357738319/oscar-pistorius-gets-5-years-in-prison-for-killing-girlfriend?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46e6198
+    @content=
+     "<p>One month into the TV season, NPR TV critic Eric Deggans says diversity is winning and rom coms are losing as new shows battle for viewers.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357643260\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/monkeysee/2014/10/21/357643260/winners-and-losers-of-the-fall-tv-season-begin-to-emerge?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 08:35:00 UTC,
+    @summary=
+     "One month into the TV season, NPR TV critic Eric Deggans says diversity is winning and rom coms are losing as new shows battle for viewers.",
+    @title="Winners And Losers Of The Fall TV Season Begin To Emerge",
+    @url=
+     "http://www.npr.org/blogs/monkeysee/2014/10/21/357643260/winners-and-losers-of-the-fall-tv-season-begin-to-emerge?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46ee988
+    @content=
+     "<p>Do big-city chiefs like John Deasy, recently ousted from LA Unified, get enough time to make a difference?</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357629164\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/ed/2014/10/21/357629164/the-short-shelf-life-of-urban-school-superintendents?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 08:35:00 UTC,
+    @summary=
+     "Do big-city chiefs like John Deasy, recently ousted from LA Unified, get enough time to make a difference?",
+    @title="The Short Shelf Life Of Urban School Superintendents ",
+    @url=
+     "http://www.npr.org/blogs/ed/2014/10/21/357629164/the-short-shelf-life-of-urban-school-superintendents?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46f71a0
+    @content=
+     "<p>Until August, 24-year-old Aza Betwata was in Holland, enjoying beef and cabbage and studying to be a social worker. Now, he's among the hundreds of exiled Kurds who have returned and taken up arms.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357612530\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/parallels/2014/10/21/357612530/kurds-leave-life-in-europe-to-fight-isis-in-their-iraqi-homeland?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 08:35:00 UTC,
+    @summary=
+     "Until August, 24-year-old Aza Betwata was in Holland, enjoying beef and cabbage and studying to be a social worker. Now, he's among the hundreds of exiled Kurds who have returned and taken up arms.",
+    @title="Kurds Leave Life In Europe To Fight ISIS In Their Iraqi Homeland ",
+    @url=
+     "http://www.npr.org/blogs/parallels/2014/10/21/357612530/kurds-leave-life-in-europe-to-fight-isis-in-their-iraqi-homeland?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46ff9b8
+    @content=
+     "<p>The Confederate flag is a sign of bigotry to some. For others, says reporter Jesse Dukes, it symbolizes family heritage and defiance — but also what he calls a \"willful innocence\" about U.S. history. <em> </em></p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357576237\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/2014/10/21/357576237/six-words-must-we-forget-our-confederate-ancestors?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 08:35:00 UTC,
+    @summary=
+     "The Confederate flag is a sign of bigotry to some. For others, says reporter Jesse Dukes, it symbolizes family heritage and defiance — but also what he calls a \"willful innocence\" about U.S. history. <em> </em>",
+    @title="Six Words: 'Must We Forget Our Confederate Ancestors?'",
+    @url=
+     "http://www.npr.org/2014/10/21/357576237/six-words-must-we-forget-our-confederate-ancestors?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae46fc0d8
+    @content=
+     "<p>De la Renta died Monday, according to a statement from his family. The Dominican designer was a ground-breaker in the industry.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357699525\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357699525/reports-fashion-icon-oscar-de-la-renta-dies-after-long-cancer-fight?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-21 02:45:00 UTC,
+    @summary=
+     "De la Renta died Monday, according to a statement from his family. The Dominican designer was a ground-breaker in the industry.",
+    @title="Fashion Icon Oscar De La Renta Dies At 82",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357699525/reports-fashion-icon-oscar-de-la-renta-dies-after-long-cancer-fight?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae47048f0
+    @content=
+     "<p>Many in the city are worried about its future, and there's speculation there will be a \"mass migration\" should violence erupt again. But some residents remain committed to the city.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357612090\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/2014/10/20/357612090/unrest-in-ferguson-may-speed-up-decline-of-real-estate?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-20 23:48:00 UTC,
+    @summary=
+     "Many in the city are worried about its future, and there's speculation there will be a \"mass migration\" should violence erupt again. But some residents remain committed to the city.",
+    @title="Unrest In Ferguson May Speed Up Decline Of Real Estate",
+    @url=
+     "http://www.npr.org/2014/10/20/357612090/unrest-in-ferguson-may-speed-up-decline-of-real-estate?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae470d108
+    @content=
+     "<p>The new guidelines call for a site supervisor, who makes sure healthcare workers put on and remove their personal protective equipment correctly.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357654619\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357654619/cdc-announces-new-guidelines-for-handling-of-ebola-patients?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-20 23:40:00 UTC,
+    @summary=
+     "The new guidelines call for a site supervisor, who makes sure healthcare workers put on and remove their personal protective equipment correctly.",
+    @title="CDC Announces New Guidelines For Health Care Workers Treating Ebola Patients ",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357654619/cdc-announces-new-guidelines-for-handling-of-ebola-patients?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae47158f8
+    @content=
+     "<p>The agency says if 2014 continues to be this hot, it's on pace to be the hottest year on record.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357644824\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357644824/this-past-september-ranks-as-hottest-on-record-noaa-says?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-20 22:03:00 UTC,
+    @summary="The agency says if 2014 continues to be this hot, it's on pace to be the hottest year on record.",
+    @title="This Past September Ranks As Hottest On Record, NOAA Says",
+    @url=
+     "http://www.npr.org/blogs/thetwo-way/2014/10/20/357644824/this-past-september-ranks-as-hottest-on-record-noaa-says?utm_medium=RSS&utm_campaign=news">,
+   #<Feedjira::Parser::ITunesRSSItem:0x007fbae471e110
+    @content=
+     "<p>Galveston, Texas, officials meant well when they tested a passenger while she was still at sea. But some say airlifting a blood sample in a Coast Guard helicopter was needlessly alarming.</p><p><a href=\"http://www.npr.org/templates/email/emailAFriend.php?storyId=357626090\">&raquo; E-Mail This</a></p>",
+    @entry_id=
+     "http://www.npr.org/blogs/health/2014/10/20/357626090/when-reassuring-isnt-cruises-needless-rush-to-test-for-ebola?utm_medium=RSS&utm_campaign=news",
+    @published=2014-10-20 21:47:00 UTC,
+    @summary=
+     "Galveston, Texas, officials meant well when they tested a passenger while she was still at sea. But some say airlifting a blood sample in a Coast Guard helicopter was needlessly alarming.",
+    @title="When Reassuring Isn't: The Rush To Test Cruise Passenger For Ebola",
+    @url=
+     "http://www.npr.org/blogs/health/2014/10/20/357626090/when-reassuring-isnt-cruises-needless-rush-to-test-for-ebola?utm_medium=RSS&utm_campaign=news">],
+ @etag="\"42be-505eed6d21200\"",
+ @feed_url="http://www.npr.org/rss/rss.php?id=1001",
+ @language="en",
+ @last_modified=Tue, 21 Oct 2014 13:30:48 +0000,
+ @title="News",
+ @url="http://www.npr.org/templates/story/story.php?storyId=1001">
