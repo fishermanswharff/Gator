@@ -1,4 +1,9 @@
 <div id="feed-container" class="container">
+  <header>
+    <h1><%= @parsed.title %></h1>  
+    <h3><%= @parsed.description  %></h3>
+  </header>
+  <hr>
   <% @parsed.entries.each do |entry|  %>
   <section class="feed grid_16">
     <header id="feed-header" class="grid_6">
