@@ -1,6 +1,6 @@
 <nav class="navbar">
   <ul class="nav">
-    <li class="brand"><%= link_to "Home", root_path, class: 'brand-home-link' %></li>
+  <li class="brand"><%= link_to("", root_path, class: 'brand-home-link') %></li>
     <li><a id="menu-button" href="javascript:void(0)" class="menu-icon indent"><span class="menu-icon__text"></span><span class="display_text">MENU</span></a></li>
     <% if user_signed_in? %>
     <li class="align-right"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

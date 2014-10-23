@@ -15,7 +15,6 @@ nav.navbar {
     @include defaults;
     list-style:none;
 
-
     li a.menu-icon{
 
       float: left;
@@ -77,14 +76,25 @@ nav.navbar {
     }
 
     li.brand {
+      margin: 0 45%;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      text-align: center;
 
-      a.brand-home-link { position: relative; top: 20px; }
+      a.brand-home-link { 
+        position: relative; 
+        top: 20px; 
+        
+        &:after {
+          position: absolute;
+          content: '';
+          top: -10px;
+          width: ($icon-width * 2);
+          height: $icon-height;
+          background-image: $icons;
+          background-position-x: -($icon-width * 0);
+          background-position-y: -($icon-height * 1);
+
+        }
+      }
     }
 
     li {

@@ -24,19 +24,19 @@
 
       &.twitter-icon {
         background-position-x: -($icon-width * 0);
-        background-position-y: -($icon-width * 0);
+        background-position-y: -($icon-height * 0);
       }
       &.linkedin-icon {
         background-position-x: -($icon-width * 1);
-        background-position-y: -($icon-width * 0);
+        background-position-y: -($icon-height * 0);
       }
       &.instagram-icon {
         background-position-x: -($icon-width * 2); 
-        background-position-y: -($icon-width * 0);
+        background-position-y: -($icon-height * 0);
       }  
       &.feed-icon {
         background-position-x: -($icon-width * 3);
-        background-position-y:  -($icon-width * 0);
+        background-position-y:  -($icon-height * 0);
       }    
     }
 
