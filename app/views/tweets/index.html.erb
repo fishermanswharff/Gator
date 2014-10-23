@@ -1,11 +1,19 @@
-<header>
-  <%= image_tag @twitter_client.user.profile_banner_url %>
-  <h2><%= image_tag @twitter_client.user.profile_image_url, class: 'profile-pic' %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
-
-</header>
-
 <div id="twitter-container" class="container">
-<% @tweets.each do |tweet| %>
+
+  <header class="profile-header grid_6">
+    <%= image_tag @twitter_client.user.profile_banner_url %>
+    <h2><%= image_tag @twitter_client.user.profile_image_url, class: 'profile-pic' %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
+  </header>
+  <div class="grid_6">
+    <h4><%= @twitter_client.user.description? ?  @twitter_client.user.description : ""  %></h4>
+    <h4><%= @twitter_client.user.location? ? @twitter_client.user.location : ""  %></h4>
+    <ul>
+      <li># Tweets: <%= @twitter_client.user.tweets_count %></li>
+      <li># Followers: <%= @twitter_client.user.followers_count? ? @twitter_client.user.followers_count : "0" %></li>
+    </ul>
+  </div>
+
+  <% @tweets.each do |tweet| %>
   <section class="grid_16 tweet">
     <header class="tweet-header grid_4">
       <h2><%= image_tag tweet.user.profile_image_url, class: 'profile-pic' %> <%= tweet.user.screen_name %></h2>
@@ -26,7 +34,6 @@
           <% end %>
         <% end %>
       </div>
-      
       <div>
         <% if tweet.hashtags? %>
           <% tweet.hashtags.each do |hashtag| %>
@@ -36,6 +43,5 @@
       </div>
     </div>
   </section>
-  <hr>
-<% end %>
+  <% end %>
 </div>

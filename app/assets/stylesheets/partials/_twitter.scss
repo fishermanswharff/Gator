@@ -1,5 +1,16 @@
 div#twitter-container {
+  header.profile-header {
+    position: relative;
 
+    h2 {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background: rgba(255,255,255,0.8)
+    }
+  }
   section.tweet {
     header.tweet-header {
       display: block;
