@@ -1,9 +1,25 @@
+<!-- Main Menu, slideout drawer style -->
+
+<!-- npr feeds -->
 <% npr = Menu.new("http://www.npr.org/rss/", {type: "NPR"}) %>
 <% nprhash = npr.instance_values %>
 <% nprlinks = nprhash.values %>
+
+<!-- ny times feeds -->
 <% nyt = Menu.new('http://www.nytimes.com/services/xml/rss/index.html', {type:"NYT"}) %>
 <% nythash = nyt.instance_values %>
 <% nytlinks = nythash.values %>
+
+<!-- tmz feeds -->
+<% tmz = Menu.new("http://www.tmz.com/feeds", {type: "TMZ"}) %>
+<% tmzhash = tmz.instance_values %>
+<% tmzlinks = tmzhash.values %>
+
+<!-- USNEWS -->
+<% usnews = Menu.new("http://www.usnews.com/info/features/rss-feeds", {type: "MISC", params: "a.rss"}) %>
+<% usnewshash = usnews.instance_values %>
+<% usnewslinks = usnewshash.values %>
+
 <nav id="feeds-menu" class="off-canvas">
   <div class="feed-form">
     <h2>Add your own rss feed:</h2>
@@ -23,6 +39,22 @@
       <a class="provider" href="javascriopt:void(0)" data-type="unit">NY Times</a>
       <ul>
         <% nytlinks[0].each_pair do |k,v| %>
+        <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}), action: "create", class: 'btn btn-default' %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" class="provider" data-type="unit">TMZ</a>
+      <ul>
+        <% tmzlinks[0].each_pair do |k,v| %>
+        <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}), action: "create", class: 'btn btn-default' %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a href="javascript:void(0)" class="provider" data-type="unit">US News &amp; World Report</a>
+      <ul>
+        <% usnewslinks[0].each_pair do |k,v| %>
         <li><%= button_to "Add #{k}", feeds_path(feed: {url: v[0]}), action: "create", class: 'btn btn-default' %></li>
         <% end %>
       </ul>

@@ -48,9 +48,41 @@ module RssGetter
     def to_hash
       Hash[@titles.zip(@urls.map{|i| i.split /,/})]
     end
-
   end
 
+  class TMZ
+    def initialize(url)
+      @page = Nokogiri::HTML(open(url))
+      parse
+    end
+
+    def parse
+      @rss_links = @page.css("div#main-content li a").select { |link| link }
+      @titles = @rss_links.map { |link| link.children.to_s }
+      @urls = @rss_links.map { |link| link['href'] } 
+    end
+
+    def to_hash
+      Hash[@titles.zip(@urls.map{|i| i.split /,/})]
+    end
+  end
+
+  class MISC
+    def initialize(url, params)
+      @page = Nokogiri::HTML(open(url))
+      parse(params)
+    end
+
+    def parse(params)
+      @rss_links = @page.css("#{params}").select { |link| link }
+      @titles = @rss_links.map { |link| link.children.to_s }
+      @urls = @rss_links.map { |link| link['href'] } 
+    end
+
+    def to_hash
+      Hash[@titles.zip(@urls.map{|i| i.split /,/})]
+    end 
+  end
 end
 
 # RSSGetter::NPR.new("http://www.npr.org/rss/")
