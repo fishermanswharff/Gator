@@ -10,7 +10,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/docs
+/docs/*.psd
 /config/env.yml
 /.irb-history
 .env
