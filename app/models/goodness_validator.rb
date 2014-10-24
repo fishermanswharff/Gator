@@ -1,7 +1,7 @@
 class GoodnessValidator < ActiveModel::Validator
   def validate(record)
-    if options[:fields].any?{|field| record.send(field) == "Evil" }
-      record.errors[:base] << "This person is evil"
+    unless Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::Atom || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::AtomEntry || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::AtomFeedBurner || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::AtomFeedBurnerEntry || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::GoogleDocsAtom || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::GoogleDocsAtomEntry || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::ITunesRSS || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::ITunesRSSItem || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::ITunesRSSOwner || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSS || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSSEntry || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSSFeedBurner || Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSSFeedBurnerEntry
+      record.errors[:base] << "Not a valid feed"
     end
   end
 end

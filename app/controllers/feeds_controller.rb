@@ -9,12 +9,15 @@ class FeedsController < ApplicationController
 
   def create
     @feed = Feed.new(feed_params)
-    @feed.user_id = current_user.id
-    @feed.title = Feed.set_title(@feed)
+    if @feed.valid?
+      @feed.user_id = current_user.id
+      @feed.title = Feed.set_title(@feed)
+    end
     if @feed.save
       redirect_to @feed
     else
-      render 'new'
+      redirect_to root_path
+      flash[:alert] = "#{@feed.errors.full_messages[0]}"
     end
   end
 

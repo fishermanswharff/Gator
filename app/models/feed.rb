@@ -1,11 +1,8 @@
 class Feed < ActiveRecord::Base
   belongs_to :user
-  validates :url,presence: true
-  # validates_with GoodnessValidator, fields: [:url]
-  # validate do |feed|
-  #   GoodnessValidator.new(feed).validate
-  # end
-
+  validates_with GoodnessValidator, fields: [:url]
+  validates :url, uniqueness: true
+  
   def self.init(url)
     @feed = Feedjira::Feed.fetch_and_parse(url)
   end
@@ -33,7 +30,57 @@ class Feed < ActiveRecord::Base
       return feed if feed.url == url
     end
   end
+
+  def is_feed?
+    Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSS
+  end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  # validates_with GoodnessValidator, fields: [:url]
+  # validate do |feed|
+  #   GoodnessValidator.new(feed).validate
+  # end
+
+
 
 # class GoodnessValidator
 #   def initialize(feed)

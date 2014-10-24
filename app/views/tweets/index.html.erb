@@ -12,7 +12,6 @@
       <li># Followers: <%= @twitter_client.user.followers_count? ? @twitter_client.user.followers_count : "0" %></li>
     </ul>
   </div>
-
   <% @tweets.each do |tweet| %>
   <section class="grid_16 tweet">
     <header class="tweet-header grid_4">
