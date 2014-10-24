@@ -8,8 +8,11 @@ class HomeController < ApplicationController
       @user_feeds = Feed.get_user_feeds(current_user)
       @users = find_users(@user_feeds)
     else
-      @feeds = Feed.get_unique_feeds
-      @users = find_users(@feeds)
+      binding.pry
+      @feeds = Feed.joins('LEFT OUTER JOIN users ON users.id = feeds.user_id').get_unique_feeds
+      # User.joins(:feeds)
+      # @feeds = Feed.get_unique_feeds
+      # @users = find_users(@feeds)
     end
   end
 
@@ -20,3 +23,4 @@ class HomeController < ApplicationController
     end
   end
 end
+
