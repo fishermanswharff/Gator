@@ -3,7 +3,6 @@ tuesday, 10/21
 incorporate feedjira into app, allow for searching of feeds (by category?), 
 allow some defaults, maybe top stories of a few different rss feeds? 
 
-
 create a magazine model/migration that belongs to users
   title
   url of article
@@ -13,7 +12,9 @@ feed = Feedjira::Feed.fetch_and_parse('http://rss.cnn.com/rss/cnn_topstories.rss
 
 refactoring jobs: 
 ———————————————————————————————————————————————————————————————
-validate the rss feed with Feedjira::Feed and Goodness Validator
+strip out any "http://" from the urls passed into the model, as the unique validation is failing on "http://sub.domain.com" vs "sub.domain.com"
 move logic from social media controllers into models
 responsive media queries/styles for the grid
 more feed links on the left
+pull images from feeds and populate grid items on home page
+render things better (eg all songs considered npr feed: are there audio tracks?, how about videos in my twitter feed?)

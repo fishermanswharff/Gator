@@ -8,6 +8,9 @@ class HomeController < ApplicationController
       @user_feeds = Feed.get_user_feeds(current_user)
     else
       @feeds = Feed.get_unique_feeds
+      @users = @feeds.map do |feed|
+        User.find(feed.user_id).email
+      end
     end
   end
 end

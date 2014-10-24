@@ -51,7 +51,7 @@
     <% @user_feeds.each do |feed| %>
       <%= link_to(feed) do  %>
         <div class="grid_4 thumb feed-thumb">
-          <h3><%= feed.title  %></h3>
+          <h3><%= feed.title %></h3>
           <p>Added by: <%= User.find(feed.user_id).email %></p>
           <span class="feed-icon"></span>
         </div>
@@ -60,12 +60,12 @@
   <% end %>
 
 <% else %>
-    <!-- rss feeds for no logged in users -->
+  <!-- rss feeds for no logged in users -->
   <% @feeds.each do |feed| %>
     <%= link_to(feed) do %>
       <div class="grid_4 thumb feed-thumb">
-        <h3><%= feed.title  %></h3>
-        <p>Added by: <%= User.find(feed.user_id).email %></p>
+        <h3><%= feed.title %></h3>
+        <p>Added by: <%= @users[@feeds.index(feed)] %></p>
         <span class="feed-icon"></span>
       </div>
     <% end %>

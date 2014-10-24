@@ -30,11 +30,7 @@ class Feed < ActiveRecord::Base
       return feed if feed.url == url
     end
   end
-
-  def is_feed?
-    Feedjira::Feed.fetch_and_parse(record.url).class == Feedjira::Parser::RSS
-  end
-
+  
 end
 
 
