@@ -4,7 +4,7 @@ module RssGetter
   require 'open-uri'
 
   class NPR
-    
+
     NPR_URL = "http://www.npr.org"
 
     def initialize(url)
@@ -18,8 +18,8 @@ module RssGetter
       @urls = get_urls(@rss_links)
     end
 
-    def get_titles(array) 
-      array.map { |link| link.children.to_s } 
+    def get_titles(array)
+      array.map { |link| link.children.to_s }
     end
 
     def get_urls(array)
@@ -59,7 +59,7 @@ module RssGetter
     def parse
       @rss_links = @page.css("div#main-content li a").select { |link| link }
       @titles = @rss_links.map { |link| link.children.to_s }
-      @urls = @rss_links.map { |link| link['href'] } 
+      @urls = @rss_links.map { |link| link['href'] }
     end
 
     def to_hash
@@ -76,12 +76,12 @@ module RssGetter
     def parse(params)
       @rss_links = @page.css("#{params}").select { |link| link }
       @titles = @rss_links.map { |link| link.children.to_s }
-      @urls = @rss_links.map { |link| link['href'] } 
+      @urls = @rss_links.map { |link| link['href'] }
     end
 
     def to_hash
       Hash[@titles.zip(@urls.map{|i| i.split /,/})]
-    end 
+    end
   end
 end
 

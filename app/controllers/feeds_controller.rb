@@ -10,8 +10,7 @@ class FeedsController < ApplicationController
   def create
     @feed = Feed.new(feed_params)
     if @feed.valid?
-      @feed.user_id = current_user.id
-      @feed.title = Feed.set_title(@feed)
+      Feed.set_attributes(@feed, current_user)
     end
     if @feed.save
       redirect_to @feed

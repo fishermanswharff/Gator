@@ -1,5 +1,4 @@
-class Menu 
-
+class Menu
   require "#{Rails.root}/app/modules/RssGetter.rb"
   def initialize(url, options={})
     if options.values[0] == "NPR"

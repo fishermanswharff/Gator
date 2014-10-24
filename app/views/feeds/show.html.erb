@@ -1,6 +1,6 @@
 <div id="feed-container" class="container">
   <header>
-    <h1><%= @parsed.title %></h1>  
+    <h1><%= @parsed.title %></h1>
     <h3><%= @parsed.description  %></h3>
   </header>
   <hr>
@@ -8,13 +8,13 @@
   <section class="feed grid_16">
     <header id="feed-header" class="grid_6">
       <h2><%= simple_format(entry.title) %></h2>
-      <p><%= entry.published  %></p>    
+      <p><%= entry.published  %></p>
     </header><!-- /header -->
     <div class="content grid_10">
       <p><%= simple_format(entry.summary) %></p>
-      <p><%= link_to entry.url, entry.url  %></p>  
+      <p><%= link_to entry.url, entry.url  %></p>
     </div>
   </section>
   <hr>
-  <% end %>  
+  <% end %>
 </div>

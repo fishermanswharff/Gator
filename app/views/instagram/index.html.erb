@@ -4,7 +4,7 @@
   <% for media_item in @page_1 %>
     <section class="instagram-feed-item grid_4">
       <div class="instagram-feed-content">
-        <%= image_tag media_item.images.low_resolution.url %>  
+        <%= image_tag media_item.images.low_resolution.url %>
       </div>
       <header class="instagram-feed-header">
         <h2><%= media_item.user.full_name %></h2>
@@ -17,7 +17,6 @@
   <div class="grid_16">
     <!-- Instagram Rate Calls -->
     <p>Rate Limit: <%= @response.headers[:x_ratelimit_limit]  %></p>
-    <p>Calls remaining: <%= @response.headers[:x_ratelimit_remaining] %></p>    
+    <p>Calls remaining: <%= @response.headers[:x_ratelimit_remaining] %></p>
   </div>
-  
 </div>

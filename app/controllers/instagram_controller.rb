@@ -12,7 +12,7 @@ class InstagramController < ApplicationController
       # this page 2 script was returning some weird biker dude's instagram feed
       # page_2_max_id = @page_1.pagination.next_max_id
       # @page_2 = @client.user_recent_media(777, max_id: page_2_max_id) unless page_2_max_id.nil?
-      
+
       @response = @client.utils_raw_response
     end
   end

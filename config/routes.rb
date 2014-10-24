@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :facebook, only: [:index]
   resources :instagram, only: [:index]
   resources :linkedin, only: [:index]
-  resources :feeds
+  resources :feeds, except: [:new]
   resources :menu, only: [:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

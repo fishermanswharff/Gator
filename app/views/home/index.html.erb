@@ -12,12 +12,12 @@
       <div class="grid_4 thumb twitter-thumb">
         <h3>Twitter</h3>
         <span class="twitter-icon"></span>
-      </div>      
+      </div>
     <% end %>
   <% else %>
     <div class="grid_4 thumb twitter-thumb">
-      <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>    
-    </div>      
+      <%= link_to "Add Your Twitter Account", user_omniauth_authorize_path(:twitter) %>
+    </div>
   <% end %>
 
   <% if has_linkedin.length > 0 %>
@@ -45,14 +45,14 @@
       <%= link_to "Add Your Instagram Account", user_omniauth_authorize_path(:instagram) %>
     </div>
   <% end %>
-    
+
   <!-- rss feeds -->
   <% if @user_feeds.length > 0  %>
     <% @user_feeds.each do |feed| %>
       <%= link_to(feed) do  %>
         <div class="grid_4 thumb feed-thumb">
           <h3><%= feed.title %></h3>
-          <p>Added by: <%= User.find(feed.user_id).email %></p>
+          <p>Added by: <%= @users[@user_feeds.index(feed)] %></p>
           <span class="feed-icon"></span>
         </div>
       <% end %>

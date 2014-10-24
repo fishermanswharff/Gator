@@ -6,11 +6,17 @@ class HomeController < ApplicationController
     if user_signed_in?
       @user = User.find(current_user)
       @user_feeds = Feed.get_user_feeds(current_user)
+      @users = find_users(@user_feeds)
     else
       @feeds = Feed.get_unique_feeds
-      @users = @feeds.map do |feed|
-        User.find(feed.user_id).email
-      end
+      @users = find_users(@feeds)
+    end
+  end
+
+  private
+  def find_users(array)
+    array.map do |item|
+      User.find(item.user_id).email
     end
   end
 end

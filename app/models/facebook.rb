@@ -1,5 +1,5 @@
 require 'net/http'
-class Facebook 
+class Facebook
   include HTTParty
 
   format :json
@@ -7,17 +7,17 @@ class Facebook
 
   def initialize(access_token)
     @access_token = access_token
-  end  
+  end
 
   def get_info
-    self.class.get('/me',:query => { :access_token => @access_token })    
+    self.class.get('/me',:query => { :access_token => @access_token })
   end
 
   def get_timeline
     self.class.get('/me/feed', :query => { :access_token => @access_token } )
   end
 
-  def get_name 
+  def get_name
     self.class.get('/me?fields=name', :query => { :access_token => @access_token } )
   end
 end
