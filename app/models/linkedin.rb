@@ -1,5 +1,5 @@
 class Linkedin
-  
+
   def initialize(current_user)
     client = LinkedinClient
     auths = UserAuthentication.all.select { |auth| auth.user_id == current_user.id }

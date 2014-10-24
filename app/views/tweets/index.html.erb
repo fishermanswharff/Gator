@@ -1,15 +1,15 @@
 <div id="twitter-container" class="container">
 
   <header class="profile-header grid_6">
-    <%= image_tag @twitter_client.user.profile_banner_url, class: 'profile-banner' %>
-    <h2><%= image_tag @twitter_client.user.profile_image_url, class: 'profile-pic' %> <%= @twitter_client.user.screen_name %>'s Twitter feed</h2>
+    <%= image_tag @user.profile_banner_url, class: 'profile-banner' %>
+    <h2><%= image_tag @user.profile_image_url, class: 'profile-pic' %> <%= @user.screen_name %>'s Twitter feed</h2>
   </header>
   <div class="grid_6">
-    <h4><%= @twitter_client.user.description? ?  @twitter_client.user.description : ""  %></h4>
-    <h4><%= @twitter_client.user.location? ? @twitter_client.user.location : ""  %></h4>
+    <h4><%= @user.description? ?  @user.description : ""  %></h4>
+    <h4><%= @user.location? ? @user.location : ""  %></h4>
     <ul>
-      <li># Tweets: <%= @twitter_client.user.tweets_count %></li>
-      <li># Followers: <%= @twitter_client.user.followers_count? ? @twitter_client.user.followers_count : "0" %></li>
+      <li># Tweets: <%= @user.tweets_count %></li>
+      <li># Followers: <%= @user.followers_count? ? @user.followers_count : "0" %></li>
     </ul>
   </div>
   <% @tweets.each do |tweet| %>
