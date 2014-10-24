@@ -60,17 +60,19 @@
   <% end %>
 
 <% else %>
+
   <!-- rss feeds for no logged in users -->
-  <% @feeds.each do |feed| %>
-    <%= link_to(feed) do %>
-      <div class="grid_4 thumb feed-thumb">
-        <h3><%= feed.title %></h3>
-        <!-- <p>Added by: <#%= @users[@feeds.index(feed)] %></p> -->
-        <span class="feed-icon"></span>
-      </div>
-    <% end %>
+  <% @users.each do |user| %>
+    <div class="grid_16">
+      <h2><%= user.email %> added:</h3>
+      <% user.feeds.each do |feed| %>
+        <%= link_to(feed) do  %>
+        <div class="grid_4 thumb feed-thumb">
+          <h3><%= feed.title %></h3>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
-
 <% end %>
-
 </div>
