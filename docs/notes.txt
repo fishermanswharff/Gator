@@ -10,11 +10,24 @@ create a magazine model/migration that belongs to users
 create a model/migration so that users can save feed items into their own magazine
 feed = Feedjira::Feed.fetch_and_parse('http://rss.cnn.com/rss/cnn_topstories.rss')
 
+
+
+
+
+
+
+
+
+
 refactoring jobs: 
 ———————————————————————————————————————————————————————————————
 strip out any "http://" from the urls passed into the model, as the unique validation is failing on "http://sub.domain.com" vs "sub.domain.com"
-move logic from social media controllers into models
 responsive media queries/styles for the grid
 more feed links on the left
 pull images from feeds and populate grid items on home page
 render things better (eg all songs considered npr feed: are there audio tracks?, how about videos in my twitter feed?)
+
+
+done jobs: 
+———————————————————————————————————————————————————————————————
+move logic from social media controllers into models

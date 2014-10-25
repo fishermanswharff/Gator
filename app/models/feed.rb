@@ -5,7 +5,6 @@ class Feed < ActiveRecord::Base
 
   def self.init(url)
     @feed = Feedjira::Feed.fetch_and_parse(url)
-
   end
 
   def self.set_attributes(feed, current_user)
