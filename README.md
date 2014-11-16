@@ -36,7 +36,7 @@ Works in progress:
 
 * Featured images for RSS feeds.
 * Cross-browser compatibility for CSS3 transitions
-
+* Rescuing Twitter Too Many Requests Errors
 
 
 Wireframes and schema preparation:
