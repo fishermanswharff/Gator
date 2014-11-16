@@ -2,11 +2,46 @@ Gator
 =========
 [Visit Gator Here](http://gator.herokuapp.com)
 
+Features
+-----------
+* Multi oAuth Providers: Twitter, LinkedIn, Instagram
+* Add your own RSS feed!
+* Select from preset feeds from popular RSS providers!
+* Read your Twitter timeline, LinkedIn feeds, Instagram feed and your favorite news all in one place.
+* See what others posted on the home page
+
+
+Project Description
+---------
+This project was completed to meet the requirements for Project 1 of General Assembly's Web Development Immersive. It was conceived, scoped and developed in a week. 
+
+Installation
+--------
+This app requires multiple API keys: 
+
+* Twitter
+* LinkedIn, with permissions to read network updates (rw_nus)
+* Instagram
+
+Gator looks for environment variables with these names:
+
+      TWITTER_CONSUMER_KEY
+      TWITTER_CONSUMER_SECRET
+      INSTAGRAM_CLIENT_ID
+      INSTAGRAM_CLIENT_SECRET
+      LINKEDIN_KEY
+      LINKEDIN_SECRET_KEY
+
+Works in progress: 
+
+* Featured images for RSS feeds.
+* Cross-browser compatibility for CSS3 transitions
 
 
 
-
-
+Wireframes and schema preparation:
+----------------
+![wireframes and schema](/docs/whiteboard-notes.jpg "Whiteboard notes")
 
 
 # Web Development Immersive on Github
@@ -19,11 +54,11 @@ Discover the students of WDI at General Assembly.  Take a peek at the code that 
 * Filter by city
 * Search by name
 * Select a student to see their Github activity, including:
-    Total # of repos
-    Followers & following count
-    Top 3 starred repositories
-    Most recent 5 commits (updates daily)
-    Breakdown of languages pushed in total to Github
+Total # of repos
+Followers & following count
+Top 3 starred repositories
+Most recent 5 commits (updates daily)
+Breakdown of languages pushed in total to Github
 
 ## Project Description
 This project was created to meet requirements for the Final Project in General Assembly's Web Development Immersive Program (July 2014).
@@ -64,17 +99,17 @@ This app requires a Github Access Token from https://developer.github.com/ (note
 
 Create a .env at the root of the github_api directory with the following:
 
-    GITHUB_ACCESS_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GITHUB_ACCESS_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 To begin, run `bundle install`
 
 Additional setup for the database and initial API calls:
 
-    rake db:create
-    rake db:seed
-    rake githubdata:account_info      # Load Github acct information
-    rake githubdata:repos             # Load repositories
-    rake githubdata:commit_messages   # Load most recent push data
+rake db:create
+rake db:seed
+rake githubdata:account_info      # Load Github acct information
+rake githubdata:repos             # Load repositories
+rake githubdata:commit_messages   # Load most recent push data
 
 ## Testing
 
