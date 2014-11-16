@@ -86,13 +86,13 @@ nav.navbar {
         &:after {
           position: absolute;
           content: '';
-          top: -10px;
+          top: 0px;
           width: ($icon-width * 2);
           height: $icon-height;
           background-image: $icons;
+          background-position: 0 -48px;
           background-position-x: -($icon-width * 0);
           background-position-y: -($icon-height * 1);
-
         }
       }
     }

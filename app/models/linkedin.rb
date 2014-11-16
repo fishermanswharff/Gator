@@ -18,7 +18,8 @@ class Linkedin
   end
 
   def get_shares
-    @client.network_updates(type: "SHAR").all
+    shares = @client.network_updates(type: "SHAR").all
+    shares.map! { |share| share if share.update_content.person.first_name != "private" }.compact
   end
 
   def get_profile

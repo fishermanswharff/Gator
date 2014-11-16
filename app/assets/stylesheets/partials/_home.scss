@@ -23,18 +23,22 @@
       background-image: $icons;
 
       &.twitter-icon {
+        background-position: 0 0;
         background-position-x: -($icon-width * 0);
         background-position-y: -($icon-height * 0);
       }
       &.linkedin-icon {
+        background-position: -48px 0;
         background-position-x: -($icon-width * 1);
         background-position-y: -($icon-height * 0);
       }
       &.instagram-icon {
+        background-position: -96px 0;
         background-position-x: -($icon-width * 2); 
         background-position-y: -($icon-height * 0);
       }  
       &.feed-icon {
+        background-position: -144px 0;
         background-position-x: -($icon-width * 3);
         background-position-y:  -($icon-height * 0);
       }    
