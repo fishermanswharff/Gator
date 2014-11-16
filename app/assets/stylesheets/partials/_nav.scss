@@ -25,51 +25,51 @@ nav.navbar {
       &:before,
       &:after,
       .menu-icon__text {
-          background: $white;
-          color: $white;
-          content: '';
-          display:block;
-          height:4px;
-          margin:6px 0;
-          width:100%;
-          border-radius: 3px;
-          @include transition(all, 0.25s, ease-in-out, 0)
-        }
+        background: $white;
+        color: $white;
+        content: '';
+        display:block;
+        height:4px;
+        margin:6px 0;
+        width:100%;
+        border-radius: 3px;
+        @include transition(all, 0.25s, ease-in-out, 0)
+      }
       .menu-icon__text {
-          text-indent: -9999px;
+        text-indent: -9999px;
+      }
+      .display_text{
+        position: absolute;
+        top: 3px;
+        padding-left: 50px;
+        text-decoration: none;
+        color: $white;
+        font-family: $body-font;
+        font-size: $large-font-size;
+        // font-weight: 700;
+        font-style: normal;
+      }
+      &.active {
+        &:before {
+          -webkit-transform: rotate(45deg) translate3d(5px,10px,0);
+          -moz-transform: rotate(45deg) translate3d(5px,10px,0);
+          -o-transform: rotate(45deg) translate3d(5px,10px,0);
+          -ms-transform: rotate(45deg) translate3d(5px,10px,0);
+          transform: rotate(45deg) translate3d(5px,10px,0);
         }
-        .display_text{
-          position: absolute;
-          top: 3px;
-          padding-left: 50px;
-          text-decoration: none;
-          color: $white;
-          font-family: $body-font;
-          font-size: $large-font-size;
-          // font-weight: 700;
-          font-style: normal;
-        }
-        &.active {
-          &:before {
-            -webkit-transform: rotate(45deg) translate3d(5px,10px,0);
-            -moz-transform: rotate(45deg) translate3d(5px,10px,0);
-            -o-transform: rotate(45deg) translate3d(5px,10px,0);
-            -ms-transform: rotate(45deg) translate3d(5px,10px,0);
-            transform: rotate(45deg) translate3d(5px,10px,0);
-          }
 
-          .menu-icon__text {
-              opacity: 0;
-          }
-
-          &:after {
-            -webkit-transform: rotate(-45deg) translate3d(5px,-10px,0);
-            -moz-transform: rotate(-45deg) translate3d(5px,-10px,0);
-            -o-transform: rotate(-45deg) translate3d(5px,-10px,0);
-            -ms-transform: rotate(-45deg) translate3d(5px,-10px,0);
-            transform: rotate(-45deg) translate3d(5px,-10px,0);
-          }
+        .menu-icon__text {
+            opacity: 0;
         }
+
+        &:after {
+          -webkit-transform: rotate(-45deg) translate3d(5px,-10px,0);
+          -moz-transform: rotate(-45deg) translate3d(5px,-10px,0);
+          -o-transform: rotate(-45deg) translate3d(5px,-10px,0);
+          -ms-transform: rotate(-45deg) translate3d(5px,-10px,0);
+          transform: rotate(-45deg) translate3d(5px,-10px,0);
+        }
+      }
     }
     .indent {
         margin: 13px auto;

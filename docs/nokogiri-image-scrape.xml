@@ -1,0 +1,224 @@
+[
+  #<Nokogiri::XML::Element:0x3fd1f5e5ccb4 name="img" 
+    attributes=
+    [
+      #<Nokogiri::XML::Attr:0x3fd1f5e5cb9c name="src" value="http://s3.reutersmedia.net/resources_v2/images/masthead-logo.gif">, 
+      #<Nokogiri::XML::Attr:0x3fd1f5e5cb88 name="alt" value="Reuters">, 
+      #<Nokogiri::XML::Attr:0x3fd1f5e5c2f0 name="border" value="0">
+    ]
+  >, 
+
+  #<Nokogiri::XML::Element:0x3fd1f5e70c3c name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5e70b4c name="src" value="http://ad.doubleclick.net/N4735792/ad/us.reuters/news/world/article;type=leaderboard;sz=728x90;tile=1;vbc=Fidelity2014;articleID=USKCN0IB1PY20141025;ord=9897?">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e70b10 name="width" value="728">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e70afc name="height" value="90">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e70ae8 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e70a98 name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5e39b24 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5e39aac name="src" value="http://ad.doubleclick.net/N4735792/ad/us.reuters/news/world/article;type=poe;sz=1x1;articleID=USKCN0IB1PY20141025;taga=aaaaaaaaa;ord=0429?">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e39a98 name="width" value="1">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e39a70 name="height" value="1">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e39a48 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e399e4 name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5dd47b0 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5dd4648 name="src" value="http://s4.reutersmedia.net/resources_v2/images/btn_articleslide_previous.png">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dd4620 name="height" value="31px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dd460c name="width" value="25px">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5dd0840 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5dd0778 name="src" value="http://s4.reutersmedia.net/resources_v2/images/btn_articleslide_next.png">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dd0728 name="height" value="31px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dd0700 name="width" value="25px">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5dc5904 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5dc583c name="src" value="http://s2.reutersmedia.net/resources/r/?m=02&d=20141024&t=2&i=986104308&w=&fh=&fw=&ll=580&pl=378&r=LYNXNPEA9N0XF">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dc5828 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dc57ec name="alt" value="Sentries return to the Tomb of the Unknown Soldier during a ceremony at the National War Memorial in Ottawa October 24, 2014.   REUTERS/Blair Gable">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5dac878 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5dac7d8 name="src" value="http://s3.reutersmedia.net/resources/r/?d=20141024&i=97570017&w=140&r=97570017-1&t=2">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dac7c4 name="width" value="140">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dac7b0 name="height" value="80">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dac79c name="alt" value="Video">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5dac788 name="border" value="0">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5da8fc0 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5da8ee4 name="class" value="overlay">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5da8ed0 name="src" value="http://s1.reutersmedia.net/resources_v2/images/video_overlay_140.gif">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5da8ebc name="width" value="140">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5da8e94 name="height" value="80">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5da8e80 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5da8e6c name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5045b1c name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f504593c name="src" value="http://s3.reutersmedia.net/resources_v2/images/btn_rel_video.gif">, 
+        #<Nokogiri::XML::Attr:0x3fd1f50457d4 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5045748 name="height" value="11px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5045734 name="width" value="43px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5045720 name="alt" value="Video">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f501d16c name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f501d0e0 name="src" value="http://s3.reutersmedia.net/resources_v2/images/btn_rel_video.gif">, 
+        #<Nokogiri::XML::Attr:0x3fd1f501d0b8 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f501d068 name="height" value="11px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f501d040 name="width" value="43px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f501d02c name="alt" value="Video">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5e65b0c name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5e65a6c name="src" value="http://s3.reutersmedia.net/resources_v2/images/btn_rel_video.gif">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e65a44 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e65a08 name="height" value="11px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e659f4 name="width" value="43px">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e659e0 name="alt" value="Video">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5eb9734 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5eb96d0 name="src" value="http://ad.doubleclick.net/N4735792/ad/us.reuters/news/world/article;type=mpu;sz=300x250;tile=2;vbc=Fidelity2014;articleID=USKCN0IB1PY20141025;ord=3085?">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5eb96bc name="width" value="300">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5eb9694 name="height" value="250">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5eb9680 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5eb966c name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5ea8da8 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5ea8cb8 name="src" value="http://s4.reutersmedia.net/resources/media/global/assets/images/20141024/20141024_713187020141024150655.jpg">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5ea8c90 name="alt" value="REUTERS/Maxim Zmeyev">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5ea8c7c name="title" value="REUTERS/Maxim Zmeyev">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5ea8c04 name="border" value="0">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5e809ac name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5e80920 name="src" value="http://ad.doubleclick.net/N4735792/ad/us.reuters/news/world/article;type=mpulow;sz=300x250;tile=3;articleID=USKCN0IB1PY20141025;ord=7330?">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e8090c name="width" value="300">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e808f8 name="height" value="250">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e808e4 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5e808d0 name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5de8148 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5de80e4 name="id" value="_bapw-icon">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5de80d0 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5de80bc name="src" value="https://cdn.betrad.com/pub/icon1.png">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5ddd9c8 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5ddd810 name="src" value="http://s4.reutersmedia.net/resources_v2/images/tr-source-txt.gif">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5ddd7fc name="border" value="0">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5d94dcc name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5d94c8c name="src" value="http://www.bizographics.com/collect/?fmt=gif&url=reuters.com&pid=501">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5d94c14 name="width" value="1">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5d94bc4 name="height" value="1">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5d94bb0 name="border" value="0">, 
+        #<Nokogiri::XML::Attr:0x3fd1f5d94b4c name="alt">
+      ]
+    >, 
+  #<Nokogiri::XML::Element:0x3fd1f5d88ff4 name="img" 
+    attributes=
+      [
+        #<Nokogiri::XML::Attr:0x3fd1f5d88f40 name="src" value="http://b.scorecardresearch.com/p?c1=2&c2=6035630&cv=2.0&cj=1">
+      ]
+    >, 
+    #<Nokogiri::XML::Element:0x3fd1f5d7867c name="img" 
+      attributes=
+        [
+          #<Nokogiri::XML::Attr:0x3fd1f5d785f0 name="alt" value="DCSIMG">, 
+          #<Nokogiri::XML::Attr:0x3fd1f5d785dc name="id" value="DCSIMG">, 
+          #<Nokogiri::XML::Attr:0x3fd1f5d785c8 name="width" value="1">, 
+          #<Nokogiri::XML::Attr:0x3fd1f5d785b4 name="height" value="1">, 
+          #<Nokogiri::XML::Attr:0x3fd1f5d785a0 name="src" value="http://statse.webtrendslive.com/dcsncwimc10000kzgoor3wv9x_3f2v/njs.gif?dcsuri=/nojavascript&WT.js=No&WT.tv=8.6.0">]>
+]
+
+
+
+
+
+
+<!-- alts -->
+[
+  #<Nokogiri::XML::Attr:0x3fd1f5e5cb88 name="alt" value="Reuters">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5e70a98 name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5e399e4 name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5dc57ec name="alt" value="Sentries return to the Tomb of the Unknown Soldier during a ceremony at the National War Memorial in Ottawa October 24, 2014.   REUTERS/Blair Gable">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5dac79c name="alt" value="Video">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5da8e6c name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5045720 name="alt" value="Video">, 
+  #<Nokogiri::XML::Attr:0x3fd1f501d02c name="alt" value="Video">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5e659e0 name="alt" value="Video">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5eb966c name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5ea8c90 name="alt" value="REUTERS/Maxim Zmeyev">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5e808d0 name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5d94b4c name="alt">, 
+  #<Nokogiri::XML::Attr:0x3fd1f5d785f0 name="alt" value="DCSIMG">
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,6 +13,14 @@
     <div class="content grid_10">
       <p><%= simple_format(entry.summary) %></p>
       <p><%= link_to entry.url, entry.url  %></p>
+      <!-- 
+      <#% src = Media.new(entry.url, {type: "image"}) %>
+      <#% if src %>
+        <#% srchash = src.instance_values %>
+        <#% srcurl = srchash.values[0].instance_values["src"].to_s %>
+        <#%= image_tag(srcurl)  %>
+      <#% end %>
+       -->
     </div>
   </section>
   <hr>
