@@ -9,7 +9,9 @@ Features
 * Select from preset feeds from popular RSS providers!
 * Read your Twitter timeline, LinkedIn feeds, Instagram feed and your favorite news all in one place.
 * See feeds other users added on the home page
-
+* #nobootstrap
+* #nofoundation
+* #nofrontendframeworks
 
 Project Description
 ---------
