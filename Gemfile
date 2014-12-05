@@ -8,7 +8,7 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
 # gem 'jbuilder', '~> 2.0'
 # gem 'sdoc', '~> 0.4.0', group: :doc
-
+# gem 'rspec-rails'
 gem 'devise'
 gem 'oauth'
 gem 'omniauth'
@@ -35,6 +35,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'dotenv-rails'
   gem 'bullet'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 
