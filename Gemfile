@@ -6,20 +6,20 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'unicorn'
+# gem 'jbuilder', '~> 2.0'
+# gem 'sdoc', '~> 0.4.0', group: :doc
+
 gem 'devise'
 gem 'oauth'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'omniauth-facebook'
+# gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
-gem 'omniauth-google-oauth2'
+# gem 'omniauth-google-oauth2'
 gem 'omniauth-instagram'
-gem 'omniauth-github'
-gem 'omniauth-tumblr'
-gem 'paperclip'
+# gem 'omniauth-github'
+# gem 'omniauth-tumblr'
+# gem 'paperclip'
 gem 'domp'
 gem 'httparty'
 gem 'feedjira'
@@ -29,12 +29,17 @@ gem 'google_plus'
 gem 'linkedin'
 gem 'instagram'
 
-group :development, :test, :production do
+group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'web-console', '~> 2.0.0.beta4'
-  gem 'spring'
   gem 'dotenv-rails'
+  gem 'bullet'
 end
 
-gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'rails_12factor'
+  gem 'spring'
+  gem 'unicorn'
+end
