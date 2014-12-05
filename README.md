@@ -1,6 +1,4 @@
-[![Build status][ci-image]][ci-url]
-
-[![Travis build status](https://travis-ci.org/bahmutov/xplain.png?branch=master)](https://travis-ci.org/bahmutov/xplain) [![Code Climate](https://codeclimate.com/github/fishermanswharff/Gator/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/Gator)
+[![Build status][ci-image]][ci-url] [![Code Climate](https://codeclimate.com/github/fishermanswharff/Gator/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/Gator)
 
 Gator
 =========
