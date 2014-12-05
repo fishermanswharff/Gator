@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/fishermanswharff/Gator/badges/gpa.svg)](https://codeclimate.com/github/fishermanswharff/Gator)
+
 Gator
 =========
 [Visit Gator Here](http://gator.herokuapp.com)
