@@ -3,14 +3,14 @@ module MediaGetter
   # this is a sweet fucking gem
   require 'nokogiri'
   require 'open-uri'
-  require 'byebug'
+  # require 'byebug'
 
   class Image
 
     def initialize(url)
       page = Nokogiri::HTML(open(url))
       images = page.css('img')
-      
+
       begin
         # gets the src of the image with the longest alt text on the page, but not all alt attributes have values, hence rescuing this block of code
         alts = images.map {|image| image.attributes["alt"]  }.compact
@@ -21,7 +21,7 @@ module MediaGetter
       rescue NoMethodError => e
         puts e.message
       end
-      
+
     end
   end
 end
