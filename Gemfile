@@ -29,6 +29,7 @@ gem 'twitter'
 gem 'google_plus'
 gem 'linkedin'
 gem 'instagram'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'pry-byebug'
